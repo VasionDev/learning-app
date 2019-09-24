@@ -1,0 +1,18 @@
+<div class="app-login-body">
+  <h6 class="text-center gray-darker">Welcome, Prüver</h6>
+  <p class="signin-logo text-center"><a class="pointer"><img src="assets/images/pruvit-logo.png" alt="logo"></a></p>
+  <form #form="ngForm">
+    <fieldset class="form-group">
+      <input class="form-control" ngModel name="username" placeholder="Username" type="text">
+    </fieldset>
+    <fieldset class="form-group">
+      <input class="form-control" ngModel name="password" placeholder="Password" type="Password">
+    </fieldset>
+    <p class="text-center sign-btn"><a class="pointer" (click)="onClickSignIn(form.value)" type="button"
+        class="btn btn-brand-primary btn-medium">Sign
+        in</a></p>
+  </form>
+  <p class="text-center forgot-text"><a class="pointer" class="brand-primary">Forgot Password</a></p>
+
+</div>
+<!-- /.app-login-body-->

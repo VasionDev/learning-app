@@ -1,0 +1,2436 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: "bebas_neuebold";
+  src: url("http://pruvitnow.com/preview/wp-content/themes/pruvit/learning-app/assets/fonts/bebasneuebold-webfont.eot");
+  src: url("http://pruvitnow.com/preview/wp-content/themes/pruvit/learning-app/assets/fonts/bebasneuebold-webfont.eot?#iefix") format("embedded-opentype"),
+    url("http://pruvitnow.com/preview/wp-content/themes/pruvit/learning-app/assets/fonts/bebasneuebold-webfont.woff2") format("woff2"),
+    url("http://pruvitnow.com/preview/wp-content/themes/pruvit/learning-app/assets/fonts/bebasneuebold-webfont.woff") format("woff"),
+    url("http://pruvitnow.com/preview/wp-content/themes/pruvit/learning-app/assets/fonts/bebasneuebold-webfont.ttf") format("truetype"),
+    url("http://pruvitnow.com/preview/wp-content/themes/pruvit/learning-app/assets/fonts/bebasneuebold-webfont.svg#bebas_neuebold") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "bebas_neuebook";
+  src: url("http://pruvitnow.com/preview/wp-content/themes/pruvit/learning-app/assets/fonts/bebasneuebook-webfont.eot");
+  src: url("http://pruvitnow.com/preview/wp-content/themes/pruvit/learning-app/assets/fonts/bebasneuebook-webfont.eot?#iefix") format("embedded-opentype"),
+    url("http://pruvitnow.com/preview/wp-content/themes/pruvit/learning-app/assets/fonts/bebasneuebook-webfont.woff2") format("woff2"),
+    url("http://pruvitnow.com/preview/wp-content/themes/pruvit/learning-app/assets/fonts/bebasneuebook-webfont.woff") format("woff"),
+    url("http://pruvitnow.com/preview/wp-content/themes/pruvit/learning-app/assets/fonts/bebasneuebook-webfont.ttf") format("truetype"),
+    url("http://pruvitnow.com/preview/wp-content/themes/pruvit/learning-app/assets/fonts/bebasneuebook-webfont.svg#bebas_neuebook") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "BebasNeueLight";
+  src: url("http://pruvitnow.com/preview/wp-content/themes/pruvit/learning-app/assets/fonts/BebasNeueLight.eot?#iefix") format("embedded-opentype"),
+    url("http://pruvitnow.com/preview/wp-content/themes/pruvit/learning-app/assets/fonts/BebasNeueLight.otf") format("opentype"),
+    url("http://pruvitnow.com/preview/wp-content/themes/pruvit/learning-app/assets/fonts/BebasNeueLight.woff") format("woff"),
+    url("http://pruvitnow.com/preview/wp-content/themes/pruvit/learning-app/assets/fonts/BebasNeueLight.ttf") format("truetype"),
+    url("http://pruvitnow.com/preview/wp-content/themes/pruvit/learning-app/assets/fonts/BebasNeueLight.svg#BebasNeueLight") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ProximaNova-Light";
+  src: url("http://pruvitnow.com/preview/wp-content/themes/pruvit/learning-app/assets/fonts/ProximaNova-Light.eot?#iefix") format("embedded-opentype"),
+    url("http://pruvitnow.com/preview/wp-content/themes/pruvit/learning-app/assets/fonts/ProximaNova-Light.otf") format("opentype"),
+    url("http://pruvitnow.com/preview/wp-content/themes/pruvit/learning-app/assets/fonts/ProximaNova-Light.woff") format("woff"),
+    url("http://pruvitnow.com/preview/wp-content/themes/pruvit/learning-app/assets/fonts/ProximaNova-Light.ttf") format("truetype"),
+    url("http://pruvitnow.com/preview/wp-content/themes/pruvit/learning-app/assets/fonts/ProximaNova-Light.svg#ProximaNova-Light") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ProximaNova-Regular";
+  src: url("http://pruvitnow.com/preview/wp-content/themes/pruvit/learning-app/assets/fonts/ProximaNova-Regular.eot?#iefix") format("embedded-opentype"),
+    url("http://pruvitnow.com/preview/wp-content/themes/pruvit/learning-app/assets/fonts/ProximaNova-Regular.otf") format("opentype"),
+    url("http://pruvitnow.com/preview/wp-content/themes/pruvit/learning-app/assets/fonts/ProximaNova-Regular.woff") format("woff"),
+    url("http://pruvitnow.com/preview/wp-content/themes/pruvit/learning-app/assets/fonts/ProximaNova-Regular.ttf") format("truetype"),
+    url("http://pruvitnow.com/preview/wp-content/themes/pruvit/learning-app/assets/fonts/ProximaNova-Regular.svg#ProximaNova-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ProximaNova-Semibold";
+  src: url("http://pruvitnow.com/preview/wp-content/themes/pruvit/learning-app/assets/fonts/ProximaNova-Semibold.eot?#iefix") format("embedded-opentype"),
+    url("http://pruvitnow.com/preview/wp-content/themes/pruvit/learning-app/assets/fonts/ProximaNova-Semibold.otf") format("opentype"),
+    url("http://pruvitnow.com/preview/wp-content/themes/pruvit/learning-app/assets/fonts/ProximaNova-Semibold.woff") format("woff"),
+    url("http://pruvitnow.com/preview/wp-content/themes/pruvit/learning-app/assets/fonts/ProximaNova-Semibold.ttf") format("truetype"),
+    url("http://pruvitnow.com/preview/wp-content/themes/pruvit/learning-app/assets/fonts/ProximaNova-Semibold.svg#ProximaNova-Semibold") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.primary-color {
+  color: #ffffff;
+}
+
+.brand-primary {
+  color: #0080ff;
+}
+
+.brand-purple {
+  color: #0080ff;
+}
+
+.brand-success {
+  color: #3cb878;
+}
+
+.brand-info {
+  color: #0080ff;
+}
+
+.brand-warning {
+  color: #ff9f19;
+}
+
+.brand-danger {
+  color: #f35958;
+}
+
+.gray-darker {
+  color: #333333;
+}
+
+.gray-dark {
+  color: #666666;
+}
+
+.gray {
+  color: #959595;
+}
+
+.gray-light {
+  color: #d6d6d6;
+}
+
+.gray-lighter {
+  color: #f2f2f2;
+}
+
+.link-color {
+  color: #ede7fa;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+h1 {
+  font-family: "ProximaNova-Light";
+  font-size: 40px;
+  line-height: 60px;
+  font-weight: normal;
+  color: #333333;
+}
+
+h2 {
+  font-family: "bebas_neuebold";
+  font-size: 40px;
+  line-height: 40px;
+  color: #333333;
+}
+
+h3 {
+  font-family: "bebas_neuebold";
+  font-size: 24px;
+  line-height: 24px;
+  color: #333333;
+}
+
+h4 {
+  font-family: "ProximaNova-Light";
+  font-size: 24px;
+  line-height: 36px;
+  font-weight: normal;
+  color: #333333;
+}
+
+h5 {
+  font-family: "ProximaNova-Light";
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: normal;
+  color: #333333;
+}
+
+h6 {
+  font-family: "ProximaNova-Semibold";
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: normal;
+  color: #333333;
+}
+
+.jumbo1 {
+  font-family: "bebas_neuebold";
+  font-size: 60px;
+  line-height: 60px;
+}
+
+.jumbo2 {
+  font-family: "bebas_neuebold";
+  font-size: 100px;
+  line-height: 90px;
+}
+
+p {
+  font-family: "ProximaNova-Light";
+  font-size: 15px;
+  line-height: 25px;
+  font-weight: normal;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.underline {
+  text-decoration: underline !important;
+}
+
+.hover-color:hover {
+  color: #666666;
+}
+
+a:hover {
+  color: inherit;
+}
+
+a:focus {
+  outline: none !important;
+}
+
+a.link-color:hover {
+  color: #ede7fa !important;
+}
+
+.p-gray-darker a:hover {
+  color: #333333;
+}
+
+.p-gray a:hover {
+  color: #959595;
+}
+
+small {
+  font-family: "ProximaNova-Light";
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: normal;
+}
+
+.error {
+  font-family: "ProximaNova-Light";
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #f35958;
+}
+
+.alert {
+  font-family: "ProximaNova-Semibold";
+  font-size: 15px;
+  line-height: 25px;
+  font-weight: normal;
+}
+
+.tooltipster-default {
+  border: none !important;
+  background: #333333 !important;
+  border-radius: 3px !important;
+}
+
+.tooltipster-default .tooltipster-content {
+  font-family: "ProximaNova-Regular" !important;
+  font-size: 11px !important;
+  line-height: 14px !important;
+  font-weight: normal !important;
+  padding: 8px 12px 10px 12px !important;
+  text-align: center;
+  width: 190px;
+  color: #ffffff;
+}
+
+.tooltip-bottom {
+  font-family: "ProximaNova-Regular" !important;
+  font-size: 11px;
+  line-height: 14px;
+  font-weight: normal;
+  background: #333333;
+  padding: 8px 12px 10px 12px;
+  color: #ffffff;
+  text-align: center;
+  border-radius: 3px;
+  width: 190px;
+  margin-top: 20px;
+  display: block;
+}
+
+.tooltip-bottom::before {
+  color: #333333;
+  content: "\f0de";
+  font-family: FontAwesome;
+  font-size: 19px;
+  position: absolute;
+  margin-top: -13px;
+  width: 162px;
+}
+
+.tooltip.bottom .tooltip-arrow {
+  display: none;
+}
+
+.green-alert {
+  color: #3cb878;
+}
+
+.orange-alert {
+  color: #ff9f19;
+}
+
+.p-gray-darker {
+  color: #333333;
+}
+
+.p-gray {
+  color: #959595;
+}
+
+.btn-cancel {
+  font-family: "ProximaNova-Light";
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: normal;
+  color: #ede7fa;
+  text-decoration: none;
+}
+
+.btn-cancel:hover {
+  color: #ede7fa;
+}
+
+.btn {
+  border-radius: 40px;
+  font-family: "bebas_neuebold";
+  text-transform: uppercase;
+  padding: 0;
+}
+
+.btn-brand-primary {
+  background: #0080ff;
+  color: #ffffff;
+}
+
+.btn-brand-primary:hover {
+  color: #ffffff;
+  background: #0272e1;
+}
+
+.btn-gray-dark {
+  background: #666666;
+  color: #333333;
+}
+
+.btn-gray-dark:hover {
+  color: #333333;
+  background: #535353;
+}
+
+.btn-border-style {
+  box-shadow: 0 0 0 2px #ffffff inset;
+  background: none;
+  color: #ffffff;
+}
+
+.btn-border-style:hover {
+  background: #ffffff;
+  color: #0080ff;
+}
+
+.btn-medium {
+  font-size: 18px;
+  line-height: 18px;
+  padding: 10px 30px;
+}
+
+.btn-large {
+  font-size: 20px;
+  line-height: 20px;
+  padding: 16px 40px;
+}
+
+.btn-icon {
+  padding-left: 52px;
+  padding-right: 60px;
+}
+
+.btn-icon::after {
+  content: "\f061";
+  font-family: FontAwesome;
+  font-size: 14px;
+  margin-left: 28px;
+  position: absolute;
+}
+
+.btn-disabled {
+  opacity: 0.3;
+}
+
+.btn-play {
+  background: rgba(42, 154, 241, 0.7) none repeat scroll 0 0;
+  height: 70px;
+  width: 70px;
+  color: #ffffff;
+  display: block;
+  margin: 0 auto;
+  padding: 19px 14px 18px 22px;
+  border-radius: 50%;
+}
+
+.btn-play img {
+  max-width: 27px;
+}
+
+.btn-play:hover {
+  background: #0080ff none repeat scroll 0 0;
+  /* mozila */
+  -moz-transition: background 0.2s ease-in;
+  /* WebKit */
+  -webkit-transition: background 0.2s ease-in;
+  /* Standard */
+  transition: background 0.2s ease-in;
+}
+
+.toolbar-link {
+  font-size: 12px;
+  line-height: 14px;
+  font-family: "ProximaNova-Regular";
+  font-weight: normal;
+  color: #959595;
+}
+
+.card {
+  border-radius: 3px;
+  padding: 20px;
+}
+
+.card-default {
+  border-width: 1px;
+  border-color: #d6d6d6;
+  border-style: solid;
+}
+
+.card-selected {
+  border-width: 2px;
+  border-color: #0080ff;
+  border-style: solid;
+}
+
+.card-hover:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-divider {
+  width: 100%;
+  height: 1px;
+  background: #d6d6d6;
+  margin: 15px 0;
+  display: block;
+  float: left;
+}
+
+input.form-control {
+  border-radius: 6px;
+  border-width: 1px;
+  border-color: #d6d6d6;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-family: "ProximaNova-Regular";
+  font-weight: normal;
+  color: #333333;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+.form-content {
+  border: 1px solid #d6d6d6;
+  border-radius: 6px;
+  display: block;
+  float: left;
+  padding: 30px;
+  max-width: 760px;
+  width: 100%;
+}
+
+.form-group button {
+  margin-left: 20px;
+}
+
+.modal-content {
+  box-shadow: 0 2px 6px rgba(0, 1, 1, 0.3);
+  border: medium none;
+}
+
+.modal-header {
+  border-bottom: none;
+  padding-top: 42px;
+  padding-left: 24px;
+}
+
+.modal-header .close {
+  position: absolute;
+  right: 14px;
+  top: 9px;
+}
+
+.modal-body {
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.modal-footer {
+  border-top: none;
+  padding-top: 24px;
+  padding-right: 15px;
+  padding-bottom: 32px;
+}
+
+.modal-footer button {
+  margin-left: 20px;
+  padding: 10px 46px;
+}
+
+.block {
+  width: 100%;
+  float: left;
+}
+
+.container {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.line-straight {
+  text-decoration: line-through;
+}
+
+.style-guide-header {
+  width: 100%;
+  height: 240px;
+  background: #333333;
+}
+
+.style-guide-header .container {
+  padding-top: 130px;
+}
+
+.style-guide-header .container .style-logo {
+  padding-left: 0px;
+}
+
+.style-title {
+  color: #0080ff;
+  font-size: 40px;
+  margin-bottom: 20px;
+  display: block;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: "bebas_neuebold";
+}
+
+.typography {
+  width: 100%;
+  background: #ffffff;
+  float: left;
+  padding: 60px 0;
+}
+
+.typography .sample-text {
+  color: #959595;
+  font-size: 12px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.typography table {
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+.typography .jambo-style {
+  margin-bottom: 78px;
+}
+
+.typography .p-block {
+  width: 90%;
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.colors {
+  width: 100%;
+  background: #ffffff;
+  float: left;
+  padding: 0 0 60px 0;
+}
+
+.colors .brand-color-box {
+  float: left;
+  margin-bottom: 17px;
+  margin-top: 17px;
+}
+
+.colors .brand-color-box div {
+  display: table-cell;
+  height: 70px;
+  text-align: center;
+  vertical-align: middle;
+  width: 170px;
+  border-radius: 3px;
+  margin-bottom: 15px;
+  font-weight: normal;
+  font-family: "ProximaNova-Light";
+}
+
+.colors .brand-primary {
+  background: #0080ff;
+  color: #ffffff;
+}
+
+.colors .brand-success {
+  background: #3cb878;
+  color: #ffffff;
+}
+
+.colors .brand-info {
+  background: #0080ff;
+  color: #ffffff;
+}
+
+.colors .brand-warning {
+  background: #ff9f19;
+  color: #ffffff;
+}
+
+.colors .brand-danger {
+  background: #f35958;
+  color: #ffffff;
+}
+
+.colors .gray-darker {
+  background: #333333;
+  color: #ffffff;
+}
+
+.colors .gray-dark {
+  background: #666666;
+  color: #ffffff;
+}
+
+.colors .gray {
+  background: #959595;
+  color: #ffffff;
+}
+
+.colors .gray-light {
+  background: #d6d6d6;
+  color: #959595;
+}
+
+.colors .gray-lighter {
+  background: #f2f2f2;
+  color: #959595;
+}
+
+.colors .sample-text {
+  color: #959595;
+  font-size: 12px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 170px;
+  text-align: center;
+  display: block;
+}
+
+.buttons {
+  width: 100%;
+  background: #ffffff;
+  float: left;
+  padding: 0 0 30px 0;
+}
+
+.buttons .sample-text {
+  color: #959595;
+  font-size: 12px;
+  margin-top: 25px;
+  margin-bottom: 10px;
+  width: 100%;
+  display: block;
+}
+
+.toolbar-link-body {
+  width: 100%;
+  float: left;
+  display: block;
+  margin-bottom: 60px;
+}
+
+.toolbar-link-body .sample-text {
+  color: #959595;
+  font-size: 12px;
+  margin-bottom: 15px;
+  width: 100%;
+  display: block;
+}
+
+.toolbar-link-body .toolbar-link {
+  display: block;
+}
+
+.cards {
+  width: 100%;
+  background: #ffffff;
+  float: left;
+  padding: 0 0 60px 0;
+}
+
+.cards .sample-text {
+  color: #959595;
+  font-size: 12px;
+  margin-top: 25px;
+  margin-bottom: 10px;
+  width: 100%;
+  display: block;
+}
+
+.cards .card {
+  width: 270px;
+  height: 135px;
+}
+
+.forms {
+  width: 100%;
+  background: #ffffff;
+  float: left;
+  padding: 0 0 60px 0;
+}
+
+.forms .sample-text {
+  color: #959595;
+  font-size: 12px;
+  margin-top: 25px;
+  margin-bottom: 10px;
+  width: 100%;
+  display: block;
+}
+
+.forms .form-input {
+  font-size: 15px;
+  font-color: #333333;
+  font-weight: normal;
+  font-family: "ProximaNova-Regular";
+}
+
+.modals {
+  width: 100%;
+  background: #ffffff;
+  float: left;
+  padding: 60px 0;
+}
+
+.modals .modal-dialog {
+  margin-left: 0px;
+}
+
+/* Slider */
+.slick-slider {
+  position: relative;
+  display: block;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.slick-list:focus {
+  outline: none;
+}
+
+.slick-list.dragging {
+  cursor: pointer;
+  cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.slick-track {
+  position: relative;
+  left: 0;
+  top: 0;
+  display: block;
+}
+
+.slick-track:before,
+.slick-track:after {
+  content: "";
+  display: table;
+}
+
+.slick-track:after {
+  clear: both;
+}
+
+.slick-loading .slick-track {
+  visibility: hidden;
+}
+
+.slick-slide {
+  float: left;
+  height: 100%;
+  min-height: 1px;
+  display: none;
+}
+
+[dir="rtl"] .slick-slide {
+  float: right;
+}
+
+.slick-slide img {
+  display: block;
+}
+
+.slick-slide.slick-loading img {
+  display: none;
+}
+
+.slick-slide.dragging img {
+  pointer-events: none;
+}
+
+.slick-initialized .slick-slide {
+  display: block;
+}
+
+.slick-loading .slick-slide {
+  visibility: hidden;
+}
+
+.slick-vertical .slick-slide {
+  display: block;
+  height: auto;
+  border: 1px solid transparent;
+}
+
+.slick-arrow.slick-hidden {
+  display: none;
+}
+
+/* Slider */
+.slick-loading .slick-list {
+  /* background: #fff url("./ajax-loader.gif") center center no-repeat; } */
+}
+
+/* Icons */
+@font-face {
+  font-family: "slick";
+  src: url("http://pruvitnow.com/preview/wp-content/themes/pruvit/learning-app/assets/fonts/slick.eot");
+  src: url("http://pruvitnow.com/preview/wp-content/themes/pruvit/learning-app/assets/fonts/slick.eot?#iefix") format("embedded-opentype"),
+    url("http://pruvitnow.com/preview/wp-content/themes/pruvit/learning-app/assets/fonts/slick.woff") format("woff"),
+    url("http://pruvitnow.com/preview/wp-content/themes/pruvit/learning-app/assets/fonts/slick.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Arrows */
+.slick-prev,
+.slick-next {
+  position: absolute;
+  display: block;
+  height: 20px;
+  width: 20px;
+  line-height: 0px;
+  font-size: 0px;
+  cursor: pointer;
+  background: transparent;
+  color: transparent;
+  top: 50%;
+  margin-top: -10px\9;
+  /*lte IE 8*/
+  -webkit-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  padding: 0;
+  border: none;
+  outline: none;
+}
+
+.slick-prev:hover,
+.slick-prev:focus,
+.slick-next:hover,
+.slick-next:focus {
+  outline: none;
+  background: transparent;
+  color: transparent;
+}
+
+.slick-prev:hover:before,
+.slick-prev:focus:before,
+.slick-next:hover:before,
+.slick-next:focus:before {
+  opacity: 1;
+}
+
+.slick-prev.slick-disabled:before,
+.slick-next.slick-disabled:before {
+  opacity: 0.25;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  font-family: "slick";
+  font-size: 20px;
+  line-height: 1;
+  color: white;
+  opacity: 0.75;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.slick-prev {
+  left: -25px;
+}
+
+[dir="rtl"] .slick-prev {
+  left: auto;
+  right: -25px;
+}
+
+.slick-prev:before {
+  content: "←";
+}
+
+[dir="rtl"] .slick-prev:before {
+  content: "→";
+}
+
+.slick-next {
+  right: -25px;
+}
+
+[dir="rtl"] .slick-next {
+  left: -25px;
+  right: auto;
+}
+
+.slick-next:before {
+  content: "→";
+}
+
+[dir="rtl"] .slick-next:before {
+  content: "←";
+}
+
+/* Dots */
+.slick-slider {
+  margin-bottom: 30px;
+}
+
+.slick-dots {
+  position: absolute;
+  bottom: -45px;
+  list-style: none;
+  display: block;
+  text-align: center;
+  padding: 0;
+  width: 100%;
+}
+
+.slick-dots li {
+  position: relative;
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  margin: 0 5px;
+  padding: 0;
+  cursor: pointer;
+}
+
+.slick-dots li button {
+  border: 0;
+  background: transparent;
+  display: block;
+  height: 20px;
+  width: 20px;
+  outline: none;
+  line-height: 0px;
+  font-size: 0px;
+  color: transparent;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.slick-dots li button:hover,
+.slick-dots li button:focus {
+  outline: none;
+}
+
+.slick-dots li button:hover:before,
+.slick-dots li button:focus:before {
+  opacity: 1;
+}
+
+.slick-dots li button:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "•";
+  width: 20px;
+  height: 20px;
+  font-family: "slick";
+  font-size: 6px;
+  line-height: 20px;
+  text-align: center;
+  color: black;
+  opacity: 0.25;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.slick-dots li.slick-active button:before {
+  color: black;
+  opacity: 0.75;
+}
+
+body {
+  background: #1d2029;
+}
+
+.custom-padding {
+  padding: 0;
+}
+
+.pruvit-learn-app-wrap {
+  max-width: 420px;
+  margin: 50px auto;
+  /* background: url(http://pruvitnow.com/preview/wp-content/themes/pruvit/learning-app/assets/images/iphone6-portrait-img.png) no-repeat scroll center center/100% 100%; */
+  height: 850px;
+  padding: 105px 20px 95px;
+}
+
+.pruvit-learn-app-wrap .main-content {
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  background: #f2f2f2;
+  /* End of app-header */
+  /* End of app-slider-content */
+  /* End of app-listBody-wrap  */
+  /*  End of req-sign-wrap  */
+  /*   End of app-login-body */
+  /* End of more-menu-wrap */
+  /* End of video-wrap */
+  /*  End of lesson-wrap  */
+  /*  End of resource-menu  */
+}
+
+.pruvit-learn-app-wrap .main-content .app-header {
+  background: #ffffff;
+  position: relative;
+}
+
+.pruvit-learn-app-wrap .main-content .app-header.detail-header {
+  padding: 5px 0;
+  position: sticky;
+  top: 0;
+  left: 0;
+  /* width: 100%; */
+  z-index: 111;
+}
+
+.pruvit-learn-app-wrap .main-content .app-header .logo {
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 12px;
+}
+
+.pruvit-learn-app-wrap .main-content .app-header .logo-background {
+  background: #000;
+}
+
+.pruvit-learn-app-wrap .main-content .app-header .logo img {
+  display: inline-block;
+  max-width: 30px;
+  width: 100%;
+}
+
+.pruvit-learn-app-wrap .main-content .app-header .bar-icon {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  width: 100%;
+  text-align: left;
+  max-width: 50px;
+}
+
+.pruvit-learn-app-wrap .main-content .app-header .bar-icon a {
+  display: inline-block;
+  text-decoration: none;
+  color: #0080ff;
+}
+
+.pruvit-learn-app-wrap .main-content .app-header .bar-icon a img {
+  display: inline-block;
+  max-width: 20px;
+  width: 100%;
+}
+
+.pruvit-learn-app-wrap .main-content .app-header .bar-icon a i {
+  font-size: 30px;
+  /* margin-top: -5px; */
+}
+
+.pruvit-learn-app-wrap .main-content .app-header .upload-icon {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  text-align: left;
+  max-width: 20px;
+}
+
+.pruvit-learn-app-wrap .main-content .app-header .upload-icon a {
+  display: inline-block;
+  text-decoration: none;
+  color: #0080ff;
+}
+
+.pruvit-learn-app-wrap .main-content .app-header .upload-icon a img {
+  display: inline-block;
+  max-width: 18px;
+  width: 100%;
+}
+
+.pruvit-learn-app-wrap .main-content .app-slider-content {
+  background: #0080ff;
+  padding: 20px 10px 40px;
+}
+
+.pruvit-learn-app-wrap .main-content .app-slider-content .app-slider {
+  margin-bottom: 0;
+}
+
+.pruvit-learn-app-wrap .main-content .app-slider-content .app-slider .app-slider-item {
+  padding: 0 7px;
+}
+
+.pruvit-learn-app-wrap .main-content .app-slider-content .app-slider .app-slider-item .slider-item-inner {
+  background: #ffffff;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+  display: block;
+  text-decoration: none;
+}
+
+.pruvit-learn-app-wrap .main-content .app-slider-content .app-slider .app-slider-item .slider-item-inner .slider-img {
+  margin-bottom: 15px;
+  height: 125px;
+  overflow: hidden;
+}
+
+.pruvit-learn-app-wrap .main-content .app-slider-content .app-slider .app-slider-item .slider-item-inner .slider-img img {
+  width: 100%;
+}
+
+.pruvit-learn-app-wrap .main-content .app-slider-content .app-slider .app-slider-item .slider-item-inner .slider-text {
+  padding: 0 15px;
+}
+
+.pruvit-learn-app-wrap .main-content .app-slider-content .app-slider .app-slider-item .slider-item-inner .slider-text .slider-title {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.pruvit-learn-app-wrap .main-content .app-slider-content .app-slider .app-slider-item .slider-item-inner .slider-text .lesson-complete {
+  margin-bottom: 50px;
+}
+
+.pruvit-learn-app-wrap .main-content .app-slider-content .app-slider .app-slider-item .slider-item-inner .progress-bar {
+  width: 100%;
+  height: 6px;
+  background: #d6d6d6;
+  position: relative;
+}
+
+.pruvit-learn-app-wrap .main-content .app-slider-content .app-slider .app-slider-item .slider-item-inner .progress-bar .bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #00c853;
+  height: 100%;
+}
+
+.pruvit-learn-app-wrap .main-content .app-slider-content .app-slider .app-slider-item.complete1 .slider-item-inner .bar {
+  width: 33.3333%;
+}
+
+.pruvit-learn-app-wrap .main-content .app-slider-content .app-slider .app-slider-item.complete2 .slider-item-inner .bar {
+  width: 66.67%;
+}
+
+.pruvit-learn-app-wrap .main-content .app-slider-content .app-slider .app-slider-item.completeAll .slider-item-inner .slider-img {
+  opacity: 0.5;
+}
+
+.pruvit-learn-app-wrap .main-content .app-slider-content .app-slider .app-slider-item.completeAll .slider-item-inner .bar {
+  width: 100%;
+}
+
+.pruvit-learn-app-wrap .main-content .app-slider-content .app-slider .app-slider-item.locked .slider-item-inner:before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.9) url(http://pruvitnow.com/preview/wp-content/themes/pruvit/learning-app/assets/images/lock-alt.svg) no-repeat scroll center center/40px auto;
+}
+
+.pruvit-learn-app-wrap .main-content .app-listBody-wrap {
+  background: #ffffff;
+  margin-bottom: 50px;
+}
+
+.pruvit-learn-app-wrap .main-content .app-listBody-wrap ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.pruvit-learn-app-wrap .main-content .app-listBody-wrap ul li {
+  display: block;
+  border-bottom: 1px solid #d6d6d6;
+  padding: 10px;
+}
+
+.pruvit-learn-app-wrap .main-content .app-listBody-wrap ul li a {
+  display: flex;
+  position: relative;
+  text-decoration: none;
+}
+
+.pruvit-learn-app-wrap .main-content .app-listBody-wrap ul li a .img {
+  border-radius: 5px;
+  width: 50px;
+  height: 50px;
+  margin-right: 15px;
+  position: relative;
+  overflow: hidden;
+}
+
+.pruvit-learn-app-wrap .main-content .app-listBody-wrap ul li a .img img {
+  width: 100%;
+  height: 100%;
+}
+
+.pruvit-learn-app-wrap .main-content .app-listBody-wrap ul li a .text {
+  height: 50px;
+  max-width: 220px;
+  display: table;
+}
+
+.pruvit-learn-app-wrap .main-content .app-listBody-wrap ul li a .text .text-middle {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.pruvit-learn-app-wrap .main-content .app-listBody-wrap ul li a .text .text-middle h6 {
+  line-height: 16px;
+  font-size: 18px;
+}
+
+.pruvit-learn-app-wrap .main-content .app-listBody-wrap ul li a .arrow-right {
+  position: absolute;
+  right: 15px;
+}
+
+.pruvit-learn-app-wrap .main-content .app-listBody-wrap ul li a .arrow-right i {
+  line-height: 50px;
+  font-size: 20px;
+  color: #d6d6d6;
+}
+
+.pruvit-learn-app-wrap .main-content .app-listBody-wrap ul li.complete-task a .img:before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 200, 83, 0.85) url(http://pruvitnow.com/preview/wp-content/themes/pruvit/learning-app/assets/images/checked-white.svg) no-repeat scroll center center/15px auto;
+}
+
+.pruvit-learn-app-wrap .main-content .req-sign-wrap {
+  margin-top: 100px;
+}
+
+.pruvit-learn-app-wrap .main-content .req-sign-wrap .req-sign {
+  margin-bottom: 15px;
+}
+
+.pruvit-learn-app-wrap .main-content .req-sign-wrap .sign-btn {
+  margin-bottom: 15px;
+}
+
+.pruvit-learn-app-wrap .main-content .req-sign-wrap .sign-btn .btn {
+  text-decoration: none;
+}
+
+.pruvit-learn-app-wrap .main-content .req-sign-wrap .how-do-join a {
+  color: #0080ff;
+}
+
+.pruvit-learn-app-wrap .main-content .app-login-body {
+  padding-top: 10px;
+}
+
+.pruvit-learn-app-wrap .main-content .app-login-body h6 {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.pruvit-learn-app-wrap .main-content .app-login-body .signin-logo {
+  margin-bottom: 40px;
+}
+
+.pruvit-learn-app-wrap .main-content .app-login-body .form-group {
+  padding: 0 50px;
+}
+
+.pruvit-learn-app-wrap .main-content .app-login-body .form-group .form-control {
+  border: none;
+  border-bottom: 1px solid #d6d6d6;
+  background: transparent;
+  border-radius: 0;
+  box-shadow: none;
+  height: 30px;
+  padding: 0;
+}
+
+.pruvit-learn-app-wrap .main-content .app-login-body .sign-btn {
+  margin-bottom: 15px;
+}
+
+.pruvit-learn-app-wrap .main-content .more-menu-wrap ul {
+  margin: 40px 0;
+  padding: 0 10px;
+  list-style: none;
+  background: #ffffff;
+  border-top: 1px solid #d6d6d6;
+  border-bottom: 1px solid #d6d6d6;
+}
+
+.pruvit-learn-app-wrap .main-content .more-menu-wrap ul li {
+  display: block;
+  padding: 10px 0;
+  border-bottom: 1px solid #d6d6d6;
+}
+
+.pruvit-learn-app-wrap .main-content .more-menu-wrap ul li a {
+  text-decoration: none;
+}
+
+.pruvit-learn-app-wrap .main-content .more-menu-wrap ul li:last-child {
+  border: none;
+}
+
+.pruvit-learn-app-wrap .main-content .more-menu-wrap .sign-out-btn {
+  margin-bottom: 20px;
+  padding: 0 20px;
+}
+
+.pruvit-learn-app-wrap .main-content .more-menu-wrap .sign-out-btn .btn {
+  width: 100%;
+  background: #d6d6d6;
+  color: #666666;
+}
+
+.pruvit-learn-app-wrap .main-content .more-menu-wrap .sign-out-btn .btn:hover {
+  background: #959595;
+}
+
+.pruvit-learn-app-wrap .main-content .more-menu-wrap .logo-gray {
+  filter: grayscale(100%);
+}
+
+.pruvit-learn-app-wrap .main-content .more-menu-wrap .logo-gray img {
+  max-width: 25px;
+  width: 100%;
+}
+
+.pruvit-learn-app-wrap .main-content .more-menu-wrap .pruvit-ventures {
+  color: #959595;
+  font-size: 14px;
+}
+
+.pruvit-learn-app-wrap .main-content .video-wrap .video {
+  position: relative;
+}
+
+.pruvit-learn-app-wrap .main-content .video-wrap .video .play-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.pruvit-learn-app-wrap .main-content .video-wrap .video .play-icon .icon-middle {
+  display: table;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.pruvit-learn-app-wrap .main-content .video-wrap .video .play-icon .icon-middle .icon {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.pruvit-learn-app-wrap .main-content .video-wrap .video .play-icon .icon-middle .icon a {
+  width: 60px;
+  height: 60px;
+  background: #ffffff;
+  text-align: center;
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.65;
+}
+
+.pruvit-learn-app-wrap .main-content .video-wrap .video .play-icon .icon-middle .icon a i {
+  line-height: 60px;
+  font-size: 25px;
+}
+
+.pruvit-learn-app-wrap .main-content .video-wrap .video .play-icon .icon-middle .icon a:hover {
+  opacity: 1;
+}
+
+.pruvit-learn-app-wrap .main-content .lesson-wrap {
+  background: #ffffff;
+  padding: 0;
+}
+
+.pruvit-learn-app-wrap .main-content .lesson-wrap .lesson-menu {
+  margin: 0;
+  padding: 0;
+  font-family: "bebas_neuebold";
+  list-style: none;
+  border: none;
+  border-radius: 0px;
+  text-align: center;
+  overflow: hidden;
+  background-color: #f2f2f2f2;
+}
+
+.pruvit-learn-app-wrap .main-content .lesson-wrap .lesson-menu li {
+  display: inline-block;
+  width: 15%;
+  padding: 15px 0;
+}
+
+.pruvit-learn-app-wrap .main-content .lesson-wrap .lesson-menu li:hover {
+  border-bottom: 2px solid #0080ff;
+}
+
+.pruvit-learn-app-wrap .main-content .lesson-wrap .lesson-menu li a {
+  display: block;
+  padding: 5px 0;
+  color: #666;
+  text-decoration: none;
+  font-size: 16px;
+  text-transform: capitalize;
+}
+
+.pruvit-learn-app-wrap .main-content .lesson-wrap .lesson-menu li.active {
+  background: transparent;
+  border-bottom: 2px solid #0080ff;
+}
+
+.pruvit-learn-app-wrap .main-content .lesson-wrap .lesson-menu li.active a {
+  color: #000;
+}
+
+.pruvit-learn-app-wrap .main-content .lesson-wrap .lesson-menu li a:hover {
+  color: #000;
+}
+
+.pruvit-learn-app-wrap .main-content .lesson-wrap hr {
+  border-color: #d6d6d6;
+  margin: 0 0 15px;
+}
+
+.pruvit-learn-app-wrap .main-content .lesson-wrap .lesson-content {
+  padding: 20px;
+}
+
+.pruvit-learn-app-wrap .main-content .lesson-wrap .lesson-content .lesson-title {
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.pruvit-learn-app-wrap .main-content .lesson-wrap .lesson-content .lesson-details {
+  margin-bottom: 15px;
+}
+
+.pruvit-learn-app-wrap .main-content .lesson-wrap .lesson-content .complete-btn .btn {
+  margin-bottom: 20px;
+  min-width: 130px;
+}
+
+.pruvit-learn-app-wrap .main-content .resource-menu {
+  background: #ffffff;
+  /* padding-top: 20px;*/
+}
+
+.pruvit-learn-app-wrap .main-content .resource-menu ul {
+  margin: 0;
+  padding: 0 10px;
+  list-style: none;
+  border-bottom: 1px solid #d6d6d6;
+  /* border-top: 1px solid #d6d6d6;  */
+}
+
+.pruvit-learn-app-wrap .main-content .resource-menu ul li {
+  display: block;
+  padding: 10px 0;
+  border-bottom: 1px solid #d6d6d6;
+}
+
+.pruvit-learn-app-wrap .main-content .resource-menu ul li a {
+  display: block;
+  text-decoration: none;
+  text-transform: capitalize;
+  position: relative;
+}
+
+.pruvit-learn-app-wrap .main-content .resource-menu ul li a i {
+  color: #d6d6d6;
+  font-size: 20px;
+}
+
+.pruvit-learn-app-wrap .main-content .resource-menu ul li a .arrow-right {
+  position: absolute;
+  right: 10px;
+  top: 0;
+}
+
+/* .pruvit-learn-app-wrap .main-content .resource-menu ul:first-child {
+                padding-top: 15px;
+              } */
+.pruvit-learn-app-wrap .main-content .resource-menu ul li:last-child {
+  border-bottom: none;
+}
+
+/* End of pruvit-learn-app-wrap */
+@media (max-width: 767px) {
+  body {
+    background: #f2f2f2;
+  }
+
+  .pruvit-learn-app-wrap {
+    max-width: 100%;
+    margin: 0;
+    background: none;
+    height: auto;
+    padding: 0;
+  }
+
+  .pruvit-learn-app-wrap .main-content {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+}
+
+@media (min-width: 1370px) {
+  .reboot-reset-wrap {
+    background-size: contain;
+  }
+
+  .reboot-product-box-wrap {
+    padding-top: 260px;
+  }
+}
+
+/*====--End of Media 1370px--====*/
+@media (min-width: 1380px) and (max-width: 1540px) {
+  .reboot-reset-wrap {
+    background-size: 800px auto;
+  }
+}
+
+/*====--End of Media 1380px--====*/
+@media (min-width: 768px) and (max-width: 1200px) {
+  .reboot-choose-kit-wrap .reboot-choose-content .choose-kit-item h2 {
+    font-size: 34px;
+  }
+
+  .reboot-reset-wrap {
+    background-size: 600px auto;
+  }
+
+  .reboot-product-iteam-wrap .reboot-product-iteam-details .product-details-info-content .reboot-suppliment-fat .suppliment-fat-top .reboot-keto-flavor {
+    max-width: 175px;
+  }
+
+  .reboot-product-iteam-wrap .reboot-product-iteam-details .product-details-info-content .reboot-suppliment-fat .suppliment-fat-top .reboot-keto-flavor .flavor-select {
+    max-width: 190px;
+  }
+}
+
+/*====--End of Media 768px to 1140px--====*/
+@media (min-width: 768px) and (max-width: 1024px) {
+  .reboot-60hour-wrap {
+    background-size: cover;
+    padding-bottom: 250px;
+    margin-bottom: 100px;
+  }
+}
+
+/*====--End of Media 768px to 1024px--====*/
+@media (max-width: 991px) {
+  .reboot-product-iteam-wrap .reboot-product-iteam-details .product-details-info-content .reboot-suppliment-fat .suppliment-fat-top .suppliment-text {
+    float: left;
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .reboot-product-iteam-wrap .reboot-product-iteam-details .product-details-info-content .reboot-suppliment-fat .suppliment-fat-top .suppliment-text .suppliment-fat-title {
+    font-size: 20px;
+  }
+
+  .reboot-product-iteam-wrap .reboot-product-iteam-details .product-details-info-content .reboot-suppliment-fat .suppliment-fat-top .reboot-keto-flavor {
+    float: left !important;
+    width: 100%;
+    display: block;
+    margin-bottom: 15px;
+  }
+}
+
+/*====--End of Media max-width:991px--====*/
+@media (min-width: 768px) and (max-width: 991px) {
+  article.container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  /*====--End of container css--====*/
+  .reboot-community-support-wrap .reboot-community-right .reboot-community-support .facebook .facebook-icon {
+    width: 20%;
+  }
+
+  .reboot-community-support-wrap .reboot-community-right .reboot-community-support .facebook .facebook-text {
+    width: 80%;
+  }
+
+  .reboot-product-iteam-wrap .reboot-product-iteam-details .product-details-info-content .reboot-suppliment-fat .suppliment-fat-top .suppliment-text .suppliment-fat-title {
+    font-size: 20px;
+  }
+}
+
+/*====--End of Media-iPad --====*/
+@media (min-width: 768px) {
+
+  .reboot-top-menu,
+  .reboot-main-menu {
+    display: block;
+  }
+
+  .reboot-mobile-menu {
+    display: none;
+  }
+
+  .mb-show {
+    display: none !important;
+  }
+}
+
+/*====--End of min-width:768px--====*/
+@media (max-width: 767px) {
+  .pruvit-learn-app-wrap .main-content .app-header.detail-header {
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 111;
+  }
+
+  .body-content-wrap {
+    margin-top: 65px;
+  }
+
+  article.container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  /*====--End of container css--====*/
+  .mb-hide {
+    display: none !important;
+  }
+
+  .mb-show {
+    display: block !important;
+  }
+
+  .reboot-mobile-navigation {
+    position: absolute;
+    top: 0;
+    z-index: 999;
+    background: #333333;
+    min-height: 55px;
+    padding: 12px 0;
+  }
+
+  .reboot-mobile-navigation .setting-left {
+    float: left;
+    position: relative;
+    z-index: 100;
+    margin-left: 20px;
+  }
+
+  .reboot-mobile-navigation .setting-left img {
+    max-width: 21px;
+    margin-top: 5px;
+  }
+
+  .reboot-mobile-navigation .logo-center {
+    left: 0;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+  }
+
+  .reboot-mobile-navigation .logo-center a {
+    display: inline-block;
+  }
+
+  .reboot-mobile-navigation .logo-center a img {
+    max-width: 90px;
+  }
+
+  .reboot-mobile-navigation .cart-menu {
+    position: absolute;
+    right: 15px;
+  }
+
+  .reboot-mobile-navigation .cart-menu a {
+    display: block;
+    position: relative;
+  }
+
+  .reboot-mobile-navigation .cart-menu a img {
+    max-width: 21px;
+    margin-top: 5px;
+  }
+
+  .reboot-mobile-navigation .cart-has-product:after {
+    color: #01aedd;
+    content: "\f111";
+    font-family: "Fontawesome";
+    font-size: 10px;
+    position: absolute;
+    right: -12px;
+    top: -5px;
+  }
+
+  /*====--End of reboot-mobile-navigation--====*/
+  .reboot-partner-nav {
+    position: absolute;
+    z-index: 999;
+    top: 55px;
+    background: rgba(51, 51, 51, 0.5);
+    padding: 5px 0 10px;
+  }
+
+  .reboot-partner-nav small {
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  .reboot-partner-nav small:hover a {
+    color: #ffffff;
+  }
+
+  /*====--End of reboot-partner-nav--====*/
+  .reboot-header .reboot-menu-wrap.reboot-header-sticky .reboot-partner-nav {
+    background: #935eff;
+  }
+
+  .reboot-landing-banner .reboot-banner-text {
+    margin: 95px auto 0;
+  }
+
+  .reboot-footer {
+    /*====--End of footer-top--====*/
+    /*====--End of footer-bottom--====*/
+  }
+
+  .reboot-footer .footer-top {
+    padding-bottom: 15px;
+  }
+
+  .reboot-footer .footer-top .footer-top-panel .footer-back-top {
+    float: right;
+    width: 100%;
+  }
+
+  .reboot-footer .footer-top .footer-top-panel .footer-back-top .back-btn {
+    float: initial;
+    max-width: 90px;
+    margin: 0 auto;
+  }
+
+  .reboot-footer .footer-bottom {
+    padding-top: 15px;
+  }
+
+  .reboot-footer .footer-bottom .footer-bottom-panel .footer-bottom-left {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .reboot-footer .footer-bottom .footer-bottom-panel .footer-bottom-left img {
+    margin: 0 auto;
+  }
+
+  .reboot-footer .footer-bottom .footer-bottom-panel .footer-bottom-right {
+    text-align: center;
+  }
+
+  /*====--End of reboot-footer--====*/
+  .reboot-choose-kit-wrap {
+    background-size: cover;
+    padding: 140px 0 80px;
+  }
+
+  .reboot-footer .footer-top .footer-top-panel .col-sm-2 {
+    width: 50%;
+    float: left;
+  }
+
+  .reboot-footer .footer-top .footer-top-panel .col-sm-2.footer-back-top {
+    width: 100%;
+  }
+
+  .reboot-footer .footer-top .footer-top-panel .footer-back-top .back-btn {
+    float: right;
+  }
+
+  .reboot-header {
+    background-size: cover;
+  }
+
+  .reboot-reset-wrap {
+    background: none;
+    padding-bottom: 0;
+  }
+
+  .reboot-reset-wrap .reboot-reset-img.mbShow {
+    display: block;
+  }
+
+  .reboot-reset-wrap .reboot-reset-text h2,
+  .reboot-reset-wrap .reboot-reset-text h5 {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .reboot-60hour-wrap {
+    margin-top: -200px;
+    /* background: url(http://pruvitnow.com/preview/wp-content/themes/pruvit/learning-app/assets/images/aDay-in-bg-mb.png) no-repeat scroll top left/cover; */
+    /*background-size: cover;*/
+    padding-top: 400px;
+  }
+
+  .reboot-60hour-wrap .reboot-60hour-left {
+    margin-bottom: 50px;
+  }
+
+  .reboot-60hour-wrap .reboot-60hour-left .reboot-Ketophagy {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .reboot-60hour-wrap .reboot-60hour-left .reboot-Ketophagy .Ketophagy {
+    max-width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .reboot-60hour-wrap .reboot-60hour-left .natural {
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .reboot-community-support-wrap .reboot-community-right .reboot-community-support {
+    padding-top: 47px;
+  }
+
+  .reboot-community-support-wrap .reboot-community-right .reboot-community-support .community-title {
+    text-align: center;
+  }
+
+  .reboot-community-support-wrap .reboot-community-right .reboot-community-support .community-details {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .reboot-community-support-wrap .reboot-community-right .reboot-community-support .facebook {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .reboot-community-support-wrap .reboot-community-right .reboot-community-support .facebook .facebook-icon {
+    width: 20%;
+  }
+
+  .reboot-community-support-wrap .reboot-community-right .reboot-community-support .facebook .facebook-text {
+    width: 80%;
+    max-width: 100%;
+  }
+
+  .reboot-product-box-wrap {
+    /* background: url(http://pruvitnow.com/preview/wp-content/themes/pruvit/learning-app/assets/images/dna-bg.png) no-repeat scroll top center/cover; */
+    padding-top: 150px;
+    padding-bottom: 40px;
+  }
+
+  .reboot-product-box-wrap .product-box-content .product-box {
+    padding: 0 20px;
+  }
+
+  .reboot-product-iteam-wrap .reboot-product-iteam-details .product-details-info-content .product-details-info {
+    margin: 0 auto 40px;
+    max-width: 100%;
+  }
+
+  .reboot-product-iteam-wrap .reboot-product-iteam-details .product-details-info-content .reboot-suppliment-fat .suppliment-fat-top .suppliment-text {
+    float: left;
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .reboot-product-iteam-wrap .reboot-product-iteam-details .product-details-info-content .reboot-suppliment-fat .suppliment-fat-top .suppliment-text .suppliment-fat-title {
+    font-size: 20px;
+  }
+
+  .reboot-product-iteam-wrap .reboot-product-iteam-details .product-details-info-content .reboot-suppliment-fat .suppliment-fat-top .reboot-keto-flavor {
+    float: left !important;
+    width: 100%;
+    display: block;
+    margin-bottom: 15px;
+  }
+
+  .reboot-arebooter-life-wrap {
+    background-size: cover;
+    margin-top: -120px;
+    padding-top: 250px;
+  }
+
+  .reboot-arebooter-life-wrap .reboot-arebooter-right .reboot-arebooter-life h2 {
+    text-align: center;
+  }
+
+  .reboot-arebooter-life-wrap .reboot-arebooter-right .reboot-arebooter-life h5 {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .reboot-arebooter-life-wrap .reboot-arebooter-right .reboot-arebooter-life .rebooter {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .will-you-reboot-content-wrap .will-you-reboot-content .will-you-reboot-left {
+    margin-top: 0;
+  }
+
+  .will-you-reboot-content-wrap .will-you-reboot-content .will-you-reboot h2 {
+    margin-bottom: 50px;
+  }
+
+  .reboot-frequently-askd {
+    padding-bottom: 50px;
+  }
+
+  .reboot-frequently-askd .panel-default {
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+
+  .reboot-frequently-askd .panel-default .panel-heading .panel-title {
+    padding-right: 0;
+  }
+
+  .reboot-frequently-askd .panel-default .panel-collapse p {
+    padding-right: 0;
+  }
+
+  .reboot-product-iteam-wrap .reboot-product-iteam .reboot-iteam-slider-nav .product-single-iteam {
+    min-height: 240px;
+  }
+
+  .reboot-product-iteam-wrap .reboot-product-iteam .reboot-iteam-slider-nav .product-single-iteam .product-name {
+    font-size: 18px;
+  }
+
+  .reboot-header .reboot-menu-wrap {
+    top: 0;
+  }
+}
+
+/*====--End of Media_767px--====*/
+@media (max-width: 640px) {
+  .jumbo1 {
+    font-size: 40px;
+    line-height: 40px;
+  }
+
+  .reboot-footer .footer-top .footer-top-panel .footer-company,
+  .reboot-footer .footer-top .footer-top-panel .footer-follow,
+  .reboot-footer .footer-top .footer-top-panel .footer-account {
+    padding-left: 0;
+  }
+
+  .reboot-footer .footer-top .footer-top-panel .footer-contact,
+  .reboot-footer .footer-top .footer-top-panel .footer-company,
+  .reboot-footer .footer-top .footer-top-panel .footer-follow,
+  .reboot-footer .footer-top .footer-top-panel .footer-account {
+    margin-bottom: 20px;
+  }
+
+  .reboot-60hour-wrap .reboot-60hour-right .reboot-60hour-icon-item h2 {
+    font-size: 28px;
+    line-height: 30px;
+  }
+}
+
+/*====--End of Media_640px--====*/
+@media (max-width: 440px) {
+  .reboot-community-support-wrap .reboot-community-right .reboot-community-support .community-title {
+    line-height: 40px;
+  }
+}
+
+/*====--End of Media_440px--====*/
+@media (max-width: 380px) {
+  .reboot-product-iteam-wrap .reboot-product-iteam-details .product-details-info-content .reboot-suppliment-fat .suppliment-fat-top .suppliment-text .suppliment-fat-title {
+    font-size: 20px;
+  }
+}
+
+/*====--End of Media_340px to Media_640px--====*/
+@media (min-width: 340px) and (max-width: 640px) {
+
+  .reboot-footer .footer-top .footer-top-panel .footer-contact,
+  .reboot-footer .footer-top .footer-top-panel .footer-company,
+  .reboot-footer .footer-top .footer-top-panel .footer-follow,
+  .reboot-footer .footer-top .footer-top-panel .footer-account {
+    width: 50%;
+    float: left;
+  }
+}
+
+/*====--End of Media_340px to Media_640px--====*/
+/*====--End of Media_460px--====*/
+@media (max-width: 420px) {
+  .reboot-header .reboot-top-menu small {
+    font-size: 10px;
+  }
+
+  .reboot-header .reboot-top-menu .language-sidemenu li {
+    margin-right: 15px;
+  }
+
+  .reboot-header .reboot-main-menu .right-cart-menu li {
+    margin-left: 20px;
+  }
+
+  .reboot-header .reboot-main-menu .right-cart-menu li a img {
+    max-width: 15px;
+  }
+
+  .reboot-choose-kit-wrap .reboot-choose-content .choose-kit-title {
+    margin-bottom: 15px;
+  }
+
+  .reboot-teame-warp .reboot-statement.bottom-more-margin {
+    margin-bottom: 60px;
+  }
+
+  .reboot-teame-warp hr.hr {
+    margin-bottom: 40px;
+  }
+
+  .reboot-frequently-askd.reboot-questions-answered {
+    padding-bottom: 0;
+  }
+
+  .reboot-disclaimer-wrap.reboot-choose-disclaimer-wrap {
+    padding-bottom: 50px;
+  }
+}
+
+/*====--End of Media_420px--====*/
+/*====--End of Media_400px--====*/
+/*====--End of Media_340px--====*/
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+
+  .reboot-community-support-wrap .reboot-community-left .reboot-community-video .play-icon,
+  .reboot-landing-banner .reboot-banner-bottom .reboot-banner-video .play-icon,
+  .reboot-arebooter-life-wrap .reboot-arebooter-left .reboot-arebooter-video .play-icon {
+    top: 42%;
+  }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) and (max-width: 440px) {
+
+  .reboot-community-support-wrap .reboot-community-left .reboot-community-video .play-icon,
+  .reboot-landing-banner .reboot-banner-bottom .reboot-banner-video .play-icon,
+  .reboot-arebooter-life-wrap .reboot-arebooter-left .reboot-arebooter-video .play-icon {
+    top: 31%;
+  }
+}
+
+@media (max-width: 767px) {
+  .reboot-product-body-banner {
+    background-size: cover;
+    padding: 20px 0 200px;
+    margin-bottom: -150px;
+  }
+
+  .reboot-product-body-banner .reboot-banner-text {
+    margin-top: 25px;
+  }
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+p.lesson-details p:last-child {
+  display: none;
+}
+
+.body-content-wrap .video-wrap .video img {
+  width: 100%;
+}
+
+/* date: 22 july 2019 */
+
+.app-header.detail-header .logo.pointer {
+  font-family: ProximaNova-Light;
+}
+
+.pruvit-learn-app-wrap .main-content .lesson-wrap .lesson-content .complete-btn .btn {
+  margin-bottom: 20px;
+  min-width: 240px;
+  padding: 16px 40px;
+  font-size: 20px;
+  line-height: 20px;
+}
+
+.pruvit-learn-app-wrap {
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.slick-track .app-slider-item.slick-slide {
+  max-width: 310px;
+}
+
+.pruvit-learn-app-wrap .main-content .app-listBody-wrap ul li a {
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+.pruvit-learn-app-wrap .slick-list.draggable {
+  max-width: 35%;
+  margin: 0 auto;
+  overflow: visible;
+}
+
+
+.lesson-content,
+.resource-menu ul li {
+  max-width: 940px;
+  margin: 0 auto !important;
+}
+
+/*-------------------- 23.07.19 -------------------------*/
+/*---------- update 01.08.2019 -------------------*/
+.app-header.detail-header .logo.pointer {
+  font-family: "ProximaNova-Semibold";
+  font-size: 18px;
+  line-height: 16px;
+}
+
+.pruvit-learn-app-wrap .main-content .app-header.detail-header {
+  border-bottom: 1px solid lightgray;
+}
+
+.pruvit-learn-app-wrap .main-content .resource-menu ul {
+  padding: 10px;
+}
+
+.pruvit-learn-app-wrap .main-content .lesson-wrap .lesson-content,
+.pruvit-learn-app-wrap .main-content .resource-menu ul li {
+  max-width: 420px;
+}
+
+.pruvit-learn-app-wrap .main-content .lesson-wrap .lesson-menu li {
+  width: 17%;
+}
+
+.pruvit-learn-app-wrap .main-content .resource-menu ul li a {
+  font-family: "ProximaNova-Semibold";
+  font-size: 18px;
+  line-height: 16px;
+}
+
+/*-------- bug in narrow desktop -------*/
+
+@media (max-width: 767px) {
+  .pruvit-learn-app-wrap .slick-list.draggable {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 320px) {
+  .pruvit-learn-app-wrap .main-content .app-slider-content .app-slider .app-slider-item .slider-item-inner .slider-text .slider-title {
+    font-size: 16px;
+  }
+}
+
+
+/*-------- change <p> to 16px normal #000 ---------*/
+.body-content-wrap p {
+  font-size: 16px;
+  color: #000;
+  font-weight: normal;
+}
+
+
+/* ------- 8 august 2019 --------- */
+.pruvit-learn-app-wrap .main-content .lesson-wrap .lesson-content .lesson-details p {
+  font-family: "ProximaNova-Regular";
+}
+
+@media (max-width: 767px) {
+  .pruvit-learn-app-wrap .main-content .app-header .bar-icon a i {
+    margin-top: 5px;
+  }
+
+  .pruvit-learn-app-wrap .main-content .lesson-wrap .lesson-menu li {
+    width: 30%;
+  }
+}
+
+
+/* ------- 24-September-2019 ------------- */
+
+.lesson-completed .btn.btn-medium.pointer {
+  display: flex;
+  justify-content: space-between;
+  }
+  
+  .label-action {
+  display: inherit;
+  }
+  
+  .label-action > p {
+  margin: 0;
+  }
+  
+  .label-action > p:first-child {
+  margin-right: 10px;
+  color: #000;
+  }
+  .label-action > p:last-child {
+  color: #fff;
+  }
+  
+  .icon > span > svg {
+  height: 25px;
+  width: 25px;
+  vertical-align: middle;
+  fill: #fff;
+  }
+
+
+  .popup-modal{
+    z-index:3;
+    display:none;
+    padding-top:100px;
+    position:fixed;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    overflow:auto;
+    background-color:rgb(0,0,0);
+    background-color:rgba(0,0,0,0.4)
+  }
+  .popup-modal-content{
+    margin:auto;
+    background-color:#fff;
+    position:relative;
+    padding:0;
+    outline:0;
+    width: 30%;
+    text-align: center;
+  }
+  
+  @media (max-width:600px){
+    .popup-modal-content{
+      margin:0 10px;
+      width:auto!important;
+      width:900px;
+    }
+  
+    .popup-modal{
+      padding-top:30px;
+    }
+  }
+  
+  
+  .popup-body {
+    padding: 10px 0;
+  }
+  
+  .popup-body > p {
+    padding: 25px 0;
+    margin: 0;
+  }
+  
+  .popup-container:after,
+  .popup-container:before{
+    content:"";
+    display:table;
+    clear:both
+  }
+  
+  .popup-teal{
+    color:#fff!important;
+    background-color:#0080ff!important;
+  }
+  
+  .popup-header h2 {
+    margin: 10px;
+    color: #fff;
+  }
+  
+  .popup-footer p {
+    margin: 5px;
+  }
+  .popup-display-topright {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    background-color: black;
+    padding: 5px 10px;
+  }
+  
+  .popup-display-topright:hover {
+    cursor: pointer;
+  }
+  
+  .popup-button-navigation {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .popup-button-navigation > a {
+    font-size: 14px;
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  
+  .button-arrow-icon {
+    height: 15px;
+    width: 15px;
+    vertical-align: middle;
+    margin-top: -3px;
+  }
+  .popup-button-navigation > a:hover,
+  .button-arrow-icon:hover {
+    fill: #0080ff; 
+    color: #0080ff;
+    cursor: pointer;
+  }
+  
+  .popup-body {
+    padding: 10px;
+  }
+  @media (max-width: 676px) {
+    .popup-modal-content {
+      margin-top: 100px;
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+

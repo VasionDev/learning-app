@@ -1,0 +1,105 @@
+<div class="app-header text-center">
+  <!-- <div class="bar-icon">
+    <a class="pointer" (click)="onClickIcon()"><img src="assets/images/menu-bar-icon-blue.png" alt="bar-icon"></a>
+  </div> -->
+  <a class="logo logo-background pointer"><img src="assets/images/pruvit-logo-black.png" alt="logo"></a>
+</div>
+<!-- /.app-header -->
+<div class="app-slider-content">
+  <div class="row app-slider">
+    <div class="col-md-12 app-slider-item" *ngFor="let post of posts"
+      [class.locked]="post.for_user || !prerequisiteComplete(post)">
+      <a [attr.data-learn-id]="post.learnID" class="slider-item-inner pointer" (click)="onClickSlide(post.learnID)">
+        <div class="slider-img">
+          <img src="{{ post.learnThumb }}" alt="img" class="img-responsive">
+        </div>
+        <div class="slider-text">
+          <h6 class="slider-title">{{ post.learnTitle }}</h6>
+          <p class="gary lesson-complete" [style.visibility]="(+indexPost === post.learnID) ? 'visible' : 'hidden'">
+            <span class="less-pass">{{ isCompleteFunction(post.learnID) }}</span> of <span
+              class="less-no">{{ post.lesson?.length }}</span>
+            lessons completed </p>
+        </div>
+        <div class="progress-bar">
+          <span class="bar" [style.width.%]="(isComplete * 100) / post.lesson?.length"
+            [style.visibility]="(+indexPost === post.learnID) ? 'visible' : 'hidden'"></span>
+        </div>
+      </a>
+    </div>
+
+  </div>
+</div>
+<!-- /.app-slider-content  -->
+
+<div class="sk-circle" *ngIf="spinner">
+  <div class="sk-circle1 sk-child"></div>
+  <div class="sk-circle2 sk-child"></div>
+  <div class="sk-circle3 sk-child"></div>
+  <div class="sk-circle4 sk-child"></div>
+  <div class="sk-circle5 sk-child"></div>
+  <div class="sk-circle6 sk-child"></div>
+  <div class="sk-circle7 sk-child"></div>
+  <div class="sk-circle8 sk-child"></div>
+  <div class="sk-circle9 sk-child"></div>
+  <div class="sk-circle10 sk-child"></div>
+  <div class="sk-circle11 sk-child"></div>
+  <div class="sk-circle12 sk-child"></div>
+</div>
+
+<div *ngFor="let post of posts">
+  <div *ngIf="(post.learnID == indexPost && !post.for_user && prerequisiteComplete(post))">
+    <div class="app-listBody-wrap">
+      <ul>
+        <li *ngFor="let lesson of post.lesson" [class.complete-task]="completedTask(post.learnID,lesson.lesson_id)">
+          <a routerLink='/' [queryParams]="{module: post.learnID, lesson: lesson.lesson_id}" class="pointer" (click)="onClickLesson(post.learnID,lesson.lesson_id)">
+            <div class="img">
+              <img src="{{ lesson.lesson_logo }}" alt="img">
+            </div>
+            <div class="text">
+              <div class="text-middle">
+                <h6 [innerHTML]="lesson.ques"></h6>
+              </div>
+            </div>
+
+            <div class="arrow-right">
+              <i class="fa fa-angle-right" aria-hidden="true"></i>
+            </div>
+
+          </a>
+        </li>
+      </ul>
+    </div>
+    <!-- /.app-listBody-wrap  -->
+  </div>
+  <div *ngIf="post.learnID == indexPost && !prerequisiteComplete(post)">
+    <div class="req-sign-wrap text-center">
+      <p class="gray-dark req-sign">
+        <b>Please complete following module/s to unlock</b>
+      </p>
+      <div class="gray-dark req-sign">
+        <p *ngFor="let prereq of post.prerequisites; let i = index">{{i+1}}. {{ prereqText(prereq) }}</p>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="post.learnID == indexPost && post.for_user && !userLoggedIn && prerequisiteComplete(post)">
+    <div class="req-sign-wrap">
+      <p class="gray-dark req-sign text-center">Please sign in to continue learn</p>
+      <div class="sign-btn text-center">
+        <a (click)="onClickSignIn(post.learnID)" [href]="(redirectUrl) ? redirectUrl : 'javascript: void(0);'"
+          class="btn btn-brand-primary btn-medium pointer">Sign In</a>
+      </div>
+      <!-- <p class="how-do-join text-center">
+        <a class="pointer">How do I join?</a>
+      </p> -->
+    </div>
+
+  </div>
+
+  <div *ngIf="post.learnID == indexPost && post.for_user && userLoggedIn">
+    <div class="req-sign-wrap">
+      <p class="gray-dark req-sign text-center">Tool is not available for current user</p>
+    </div>
+    <!--  /.req-sign-wrap  -->
+  </div>
+
+</div>

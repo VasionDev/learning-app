@@ -1,0 +1,68 @@
+<div *ngFor="let post of posts">
+  <div *ngIf="post.learnID == indexPost">
+    <div *ngFor="let lesson of post.lesson">
+      <div *ngIf="lesson.lesson_id == indexLesson">
+        <div class="app-header detail-header text-center">
+          <div class="bar-icon">
+            <a class="pointer" (click)="onClickLeft()"><i class="fa fa-angle-left"></i></a>
+          </div>
+          <a class="logo pointer">{{ lesson.ques }}</a>
+          <!-- <div class="upload-icon">
+            <a class="pointer"><img src="assets/images/upload-icon.png" alt="icon"></a>
+          </div> -->
+        </div>
+        <!-- /.app-header -->
+
+        <div class="body-content-wrap">
+          <div class="video-wrap">
+            <div class="video">
+              <div *ngIf="lesson.id != ''; else lessonBanner" class="wistia_responsive_padding"
+                style="padding:56.25% 0 0 0;position:relative;">
+                <div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;">
+                  <div class="wistia_embed wistia_async_{{
+                      lesson.id
+                    }} autoPlay=false seo=false videoFoam=true" style="height:100%;width:100%">
+                    &nbsp
+                  </div>
+                </div>
+              </div>
+              <ng-template #lessonBanner>
+                <img *ngIf="lesson.lesson_image != ''" src="{{ lesson.lesson_image }}" alt="img" />
+              </ng-template>
+              <!-- <div class="play-icon">
+                  <div class="icon-middle">
+                    <div class="icon">
+                      <a class="pointer"><i class="fa fa-volume-up" aria-hidden="true"></i></a>
+                    </div>
+                  </div>
+                </div> -->
+            </div>
+          </div>
+          <!-- End of video-wrap  -->
+          <div class="lesson-wrap">
+            <ul class="lesson-menu">
+              <li><a class="pointer" (click)="onClickLesson()">lesson</a></li>
+              <li class="active"><a class="pointer">resources</a></li>
+            </ul>
+          </div>
+          <!-- End of lesson-tab-wrap  -->
+          <div *ngFor="let post of posts">
+            <div class="resource-menu" *ngIf="post.learnID == indexPost">
+              <ul *ngFor="let resource of post.resource">
+                <li>
+                  <a class="pointer" (click)="onNavigate(resource.external_link)">{{ resource.title }}
+                    <div class="arrow-right">
+                      <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <!-- End of resource-menu  -->
+            <div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

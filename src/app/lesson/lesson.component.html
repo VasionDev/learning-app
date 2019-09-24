@@ -1,0 +1,137 @@
+<jw-modal id="lesson-modal" class="popup-modal">
+  <div class="popup-modal-content">
+    <header class="popup-container popup-teal popup-header"> 
+      <!-- <span (click)="closeModal('lesson-modal');" 
+      class="popup-button popup-display-topright">&times;</span> -->
+      <h2>Congratulation</h2>
+    </header>
+    <div class="popup-container popup-body">
+      <p>You have successfully completed all <b>{{completedToolName}}</b> lessons</p>
+      
+      <div class="popup-button-navigation">
+        <!-- <a href=""><svg class="button-arrow-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M231.536 475.535l7.071-7.07c4.686-4.686 4.686-12.284 0-16.971L60.113 273H436c6.627 0 12-5.373 12-12v-10c0-6.627-5.373-12-12-12H60.113L238.607 60.506c4.686-4.686 4.686-12.284 0-16.971l-7.071-7.07c-4.686-4.686-12.284-4.686-16.97 0L3.515 247.515c-4.686 4.686-4.686 12.284 0 16.971l211.051 211.05c4.686 4.686 12.284 4.686 16.97-.001z"/></svg> Go Back</a> -->
+        <a style="cursor:pointer;" (click)="onClickLeft()">Continue Lesson<svg class="button-arrow-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M216.464 36.465l-7.071 7.07c-4.686 4.686-4.686 12.284 0 16.971L387.887 239H12c-6.627 0-12 5.373-12 12v10c0 6.627 5.373 12 12 12h375.887L209.393 451.494c-4.686 4.686-4.686 12.284 0 16.971l7.071 7.07c4.686 4.686 12.284 4.686 16.97 0l211.051-211.05c4.686-4.686 4.686-12.284 0-16.971L233.434 36.465c-4.686-4.687-12.284-4.687-16.97 0z"/></svg></a>
+      </div>
+    </div>
+    <footer class="popup-container popup-teal popup-footer">
+      <p>Thank You <span>&#9786;</span></p>
+    </footer>
+
+</div>
+
+
+
+
+<!-- <h1>A Custom Angular 7 Modal!</h1>
+<p>Home page text: <input type="text" [(ngModel)]="bodyText" /></p>
+<button (click)="closeModal('lesson-modal');">Close</button> -->
+</jw-modal>
+
+
+<div *ngFor="let post of posts; let postIndex = index;">
+<div *ngIf="post.learnID == indexPost">
+<div *ngFor="let lesson of post.lesson">
+  <div *ngIf="lesson.lesson_id == indexLesson">
+    <div class="app-header detail-header text-center">
+      <div class="bar-icon">
+        <a class="pointer" (click)="onClickLeft()"><i class="fa fa-angle-left"></i></a>
+      </div>
+      <a class="logo pointer" [innerHTML]="lesson.ques"></a>
+      <!-- <div class="upload-icon">
+        <a class="pointer"><img src="assets/images/upload-icon.png" alt="icon"></a>
+      </div> -->
+    </div>
+    <!-- /.app-header -->
+
+    <div class="body-content-wrap">
+      <div class="video-wrap">
+        <div class="video">
+          <div *ngIf="lesson.id != ''; else lessonBanner" class="wistia_responsive_padding"
+            style="padding:56.25% 0 0 0;position:relative;">
+            <div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;">
+              <div class="wistia_embed wistia_async_{{
+                  lesson.id
+                }} autoPlay=false seo=false videoFoam=true" style="height:100%;width:100%">
+                &nbsp
+              </div>
+            </div>
+          </div>
+          <ng-template #lessonBanner>
+            <img *ngIf="lesson.lesson_image != ''" src="{{ lesson.lesson_image }}" alt="img" />
+          </ng-template>
+          <!-- <div class="play-icon">
+          <div class="icon-middle">
+            <div class="icon">
+              <a class="pointer"><i class="fa fa-volume-up" aria-hidden="true"></i></a>
+            </div>
+          </div>
+        </div> -->
+        </div>
+      </div>
+      <!-- End of video-wrap  -->
+
+      <div class="lesson-wrap">
+        <ul class="lesson-menu">
+          <li class="active"><a class="pointer">lesson</a></li>
+          <li>
+            <a class="pointer" (click)="onClickResource()">resources</a>
+          </li>
+        </ul>
+
+        <hr />
+
+        <div class="lesson-content">
+          <!-- <h4 class="lesson-title" [innerHTML]="lesson.ques"></h4> -->
+          <p class="lesson-details" [innerHTML]="lesson.ans"></p>
+
+          <!-- <p class="complete-btn text-center">
+            <a routerLink="/" (click)="onClickComplete(!completed)" [ngClass]="
+                completed === true ? 'btn-success' : 'btn-brand-primary'
+              " class="btn btn-medium pointer">
+              {{ completed === true ? "Completed" : "Complete" }}</a>
+          </p> -->
+          <!-- <p *ngIf="lesson.next_lesson != null; else completeSection" class="complete-btn text-center">
+            <a (click)="onClickNewComplete(post.learnID, lesson.next_lesson.lesson_id)" class="btn btn-medium pointer btn-brand-primary">
+              {{lesson.next_lesson.ques}}
+            </a>
+          </p> -->
+          <p *ngIf="lesson.next_lesson != null; else completeSection" class="lesson-completed complete-btn text-center">
+            <a (click)="onClickNewComplete(post.learnID, lesson.next_lesson.lesson_id)" class="btn btn-medium pointer btn-brand-primary">
+              <div class="label-action">
+              <p>next</p>
+              <p>{{lesson.next_lesson.ques}}</p>
+              </div>
+              <div class="icon">
+              <span>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M8 256c0 137 111 248 248 248s248-111 248-248S393 8 256 8 8 119 8 256zM256 40c118.7 0 216 96.1 216 216 0 118.7-96.1 216-216 216-118.7 0-216-96.1-216-216 0-118.7 96.1-216 216-216zm12.5 92.5l115.1 115c4.7 4.7 4.7 12.3 0 17l-115.1 115c-4.7 4.7-12.3 4.7-17 0l-6.9-6.9c-4.7-4.7-4.7-12.5.2-17.1l85.6-82.5H140c-6.6 0-12-5.4-12-12v-10c0-6.6 5.4-12 12-12h190.3l-85.6-82.5c-4.8-4.7-4.9-12.4-.2-17.1l6.9-6.9c4.8-4.7 12.4-4.7 17.1 0z"/></svg>
+              </span>
+              </div>
+              
+              </a>
+          </p>
+          <ng-template #completeSection>
+            <p *ngIf="incompleteLesson == ''" class="lesson-completed omplete-btn text-center">
+
+                <a (click)="onClickCompleteAll(postIndex, post.learnID)" class="btn btn-medium pointer btn-brand-primary">
+                    <div class="label-action">
+                      <p>Complete module</p>
+                    </div>
+                    <div class="icon">
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 8C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 464c-118.664 0-216-96.055-216-216 0-118.663 96.055-216 216-216 118.664 0 216 96.055 216 216 0 118.663-96.055 216-216 216zm141.63-274.961L217.15 376.071c-4.705 4.667-12.303 4.637-16.97-.068l-85.878-86.572c-4.667-4.705-4.637-12.303.068-16.97l8.52-8.451c4.705-4.667 12.303-4.637 16.97.068l68.976 69.533 163.441-162.13c4.705-4.667 12.303-4.637 16.97.068l8.451 8.52c4.668 4.705 4.637 12.303-.068 16.97z"/></svg>
+                    </span>
+                    </div>
+                    
+                </a>
+                
+            </p>
+          </ng-template>
+          <p (click)="getTheLesson(post.learnID, incompleteEl.lesson_id)" style="cursor: pointer;" *ngFor="let incompleteEl of incompleteLesson; let lessonNo = index;"> {{lessonNo + 1}}. {{incompleteEl.ques}}</p>
+        </div>
+      </div>
+      <!-- End of lesson-tab-wrap  -->
+    </div>
+  </div>
+</div>
+</div>
+</div>

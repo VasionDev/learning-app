@@ -1,0 +1,28 @@
+<div class="app-header text-center">
+  <div class="bar-icon">
+    <a class="pointer" (click)="onClickDone()">Done</a>
+  </div>
+  <a class="logo pointer">More</a>
+</div>
+<!-- /.app-header -->
+
+
+<div class="more-menu-wrap">
+  <ul>
+    <li><a class="pointer">Pruvit Pluse</a></li>
+    <li><a class="pointer">About us</a></li>
+    <li><a class="pointer">Share Pruvit Learn</a></li>
+    <li><a class="pointer">Rate us on App Store</a></li>
+    <li><a class="pointer">Send feedback</a></li>
+  </ul>
+
+  <p class="sign-out-btn text-center" *ngIf="userLoggedIn">
+    <a (click)="onClickSignOut()" class="btn btn-brand-primary btn-medium pointer">sign out</a>
+  </p>
+
+  <p class="logo-gray text-center">
+    <img src="assets/images/pruvit-logo.png" alt="logo">
+  </p>
+
+  <p class="pruvit-ventures text-center"> pruvit ventures , Inc. 2.5.0.372</p>
+</div>

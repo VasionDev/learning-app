@@ -3,6 +3,7 @@ import { DataService } from "./../services/data.service";
 import { ModalService } from "./../services/modal.service";
 import { Component, OnInit } from "@angular/core";
 import { ActivatedRoute, Router } from '@angular/router';
+import { trigger, transition, animate, style } from '@angular/animations';
 
 let IndexArray = [];
 let LessonArray = [];
@@ -10,7 +11,18 @@ let LessonArray = [];
 @Component({
   selector: "app-lesson",
   templateUrl: "./lesson.component.html",
-  styleUrls: ["./lesson.component.css"]
+  styleUrls: ["./lesson.component.css"],
+  animations: [
+    trigger('slideInOut', [
+      transition(':enter', [
+        style({transform: 'translateX(-100%)'}),
+        animate('200ms ease-in', style({transform: 'translateX(0%)'}))
+      ]),
+      // transition(':leave', [
+      //   animate('300ms ease-in', style({transform: 'translateX(-100%)'}))
+      // ])
+    ])
+  ]
 })
 export class LessonComponent implements OnInit {
   indexLesson: any;
@@ -66,6 +78,17 @@ export class LessonComponent implements OnInit {
 
     this.completeChange(this.indexPost, this.indexLesson);
     this.router.navigate(['/'], {queryParams: {module: postID, lesson: lessonID}});
+    window.scrollTo(0, 0);
+  }
+
+  lessonTitleShortener(title: string) {
+    let newTitle: string;
+    if ( title.length > 15 ) {
+      newTitle = title.substr(0, 15) + '...';
+    } else {
+      newTitle = title;
+    }
+    return newTitle;
   }
 
   onClickCompleteAll(postIndex: any, postID: any) {

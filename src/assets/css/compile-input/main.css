@@ -2,68 +2,68 @@
 
 @font-face {
   font-family: "bebas_neuebold";
-  src: url("http://pruvitnow.com/preview/wp-content/themes/pruvit/learning-app/assets/fonts/bebasneuebold-webfont.eot");
-  src: url("http://pruvitnow.com/preview/wp-content/themes/pruvit/learning-app/assets/fonts/bebasneuebold-webfont.eot?#iefix") format("embedded-opentype"),
-    url("http://pruvitnow.com/preview/wp-content/themes/pruvit/learning-app/assets/fonts/bebasneuebold-webfont.woff2") format("woff2"),
-    url("http://pruvitnow.com/preview/wp-content/themes/pruvit/learning-app/assets/fonts/bebasneuebold-webfont.woff") format("woff"),
-    url("http://pruvitnow.com/preview/wp-content/themes/pruvit/learning-app/assets/fonts/bebasneuebold-webfont.ttf") format("truetype"),
-    url("http://pruvitnow.com/preview/wp-content/themes/pruvit/learning-app/assets/fonts/bebasneuebold-webfont.svg#bebas_neuebold") format("svg");
+  src: url("https://pruvitnow.com/preview/wp-content/themes/pruvit/learning-app/assets/fonts/bebasneuebold-webfont.eot");
+  src: url("https://pruvitnow.com/preview/wp-content/themes/pruvit/learning-app/assets/fonts/bebasneuebold-webfont.eot?#iefix") format("embedded-opentype"),
+    url("https://pruvitnow.com/preview/wp-content/themes/pruvit/learning-app/assets/fonts/bebasneuebold-webfont.woff2") format("woff2"),
+    url("https://pruvitnow.com/preview/wp-content/themes/pruvit/learning-app/assets/fonts/bebasneuebold-webfont.woff") format("woff"),
+    url("https://pruvitnow.com/preview/wp-content/themes/pruvit/learning-app/assets/fonts/bebasneuebold-webfont.ttf") format("truetype"),
+    url("https://pruvitnow.com/preview/wp-content/themes/pruvit/learning-app/assets/fonts/bebasneuebold-webfont.svg#bebas_neuebold") format("svg");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "bebas_neuebook";
-  src: url("http://pruvitnow.com/preview/wp-content/themes/pruvit/learning-app/assets/fonts/bebasneuebook-webfont.eot");
-  src: url("http://pruvitnow.com/preview/wp-content/themes/pruvit/learning-app/assets/fonts/bebasneuebook-webfont.eot?#iefix") format("embedded-opentype"),
-    url("http://pruvitnow.com/preview/wp-content/themes/pruvit/learning-app/assets/fonts/bebasneuebook-webfont.woff2") format("woff2"),
-    url("http://pruvitnow.com/preview/wp-content/themes/pruvit/learning-app/assets/fonts/bebasneuebook-webfont.woff") format("woff"),
-    url("http://pruvitnow.com/preview/wp-content/themes/pruvit/learning-app/assets/fonts/bebasneuebook-webfont.ttf") format("truetype"),
-    url("http://pruvitnow.com/preview/wp-content/themes/pruvit/learning-app/assets/fonts/bebasneuebook-webfont.svg#bebas_neuebook") format("svg");
+  src: url("https://pruvitnow.com/preview/wp-content/themes/pruvit/learning-app/assets/fonts/bebasneuebook-webfont.eot");
+  src: url("https://pruvitnow.com/preview/wp-content/themes/pruvit/learning-app/assets/fonts/bebasneuebook-webfont.eot?#iefix") format("embedded-opentype"),
+    url("https://pruvitnow.com/preview/wp-content/themes/pruvit/learning-app/assets/fonts/bebasneuebook-webfont.woff2") format("woff2"),
+    url("https://pruvitnow.com/preview/wp-content/themes/pruvit/learning-app/assets/fonts/bebasneuebook-webfont.woff") format("woff"),
+    url("https://pruvitnow.com/preview/wp-content/themes/pruvit/learning-app/assets/fonts/bebasneuebook-webfont.ttf") format("truetype"),
+    url("https://pruvitnow.com/preview/wp-content/themes/pruvit/learning-app/assets/fonts/bebasneuebook-webfont.svg#bebas_neuebook") format("svg");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "BebasNeueLight";
-  src: url("http://pruvitnow.com/preview/wp-content/themes/pruvit/learning-app/assets/fonts/BebasNeueLight.eot?#iefix") format("embedded-opentype"),
-    url("http://pruvitnow.com/preview/wp-content/themes/pruvit/learning-app/assets/fonts/BebasNeueLight.otf") format("opentype"),
-    url("http://pruvitnow.com/preview/wp-content/themes/pruvit/learning-app/assets/fonts/BebasNeueLight.woff") format("woff"),
-    url("http://pruvitnow.com/preview/wp-content/themes/pruvit/learning-app/assets/fonts/BebasNeueLight.ttf") format("truetype"),
-    url("http://pruvitnow.com/preview/wp-content/themes/pruvit/learning-app/assets/fonts/BebasNeueLight.svg#BebasNeueLight") format("svg");
+  src: url("https://pruvitnow.com/preview/wp-content/themes/pruvit/learning-app/assets/fonts/BebasNeueLight.eot?#iefix") format("embedded-opentype"),
+    url("https://pruvitnow.com/preview/wp-content/themes/pruvit/learning-app/assets/fonts/BebasNeueLight.otf") format("opentype"),
+    url("https://pruvitnow.com/preview/wp-content/themes/pruvit/learning-app/assets/fonts/BebasNeueLight.woff") format("woff"),
+    url("https://pruvitnow.com/preview/wp-content/themes/pruvit/learning-app/assets/fonts/BebasNeueLight.ttf") format("truetype"),
+    url("https://pruvitnow.com/preview/wp-content/themes/pruvit/learning-app/assets/fonts/BebasNeueLight.svg#BebasNeueLight") format("svg");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "ProximaNova-Light";
-  src: url("http://pruvitnow.com/preview/wp-content/themes/pruvit/learning-app/assets/fonts/ProximaNova-Light.eot?#iefix") format("embedded-opentype"),
-    url("http://pruvitnow.com/preview/wp-content/themes/pruvit/learning-app/assets/fonts/ProximaNova-Light.otf") format("opentype"),
-    url("http://pruvitnow.com/preview/wp-content/themes/pruvit/learning-app/assets/fonts/ProximaNova-Light.woff") format("woff"),
-    url("http://pruvitnow.com/preview/wp-content/themes/pruvit/learning-app/assets/fonts/ProximaNova-Light.ttf") format("truetype"),
-    url("http://pruvitnow.com/preview/wp-content/themes/pruvit/learning-app/assets/fonts/ProximaNova-Light.svg#ProximaNova-Light") format("svg");
+  src: url("https://pruvitnow.com/preview/wp-content/themes/pruvit/learning-app/assets/fonts/ProximaNova-Light.eot?#iefix") format("embedded-opentype"),
+    url("https://pruvitnow.com/preview/wp-content/themes/pruvit/learning-app/assets/fonts/ProximaNova-Light.otf") format("opentype"),
+    url("https://pruvitnow.com/preview/wp-content/themes/pruvit/learning-app/assets/fonts/ProximaNova-Light.woff") format("woff"),
+    url("https://pruvitnow.com/preview/wp-content/themes/pruvit/learning-app/assets/fonts/ProximaNova-Light.ttf") format("truetype"),
+    url("https://pruvitnow.com/preview/wp-content/themes/pruvit/learning-app/assets/fonts/ProximaNova-Light.svg#ProximaNova-Light") format("svg");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "ProximaNova-Regular";
-  src: url("http://pruvitnow.com/preview/wp-content/themes/pruvit/learning-app/assets/fonts/ProximaNova-Regular.eot?#iefix") format("embedded-opentype"),
-    url("http://pruvitnow.com/preview/wp-content/themes/pruvit/learning-app/assets/fonts/ProximaNova-Regular.otf") format("opentype"),
-    url("http://pruvitnow.com/preview/wp-content/themes/pruvit/learning-app/assets/fonts/ProximaNova-Regular.woff") format("woff"),
-    url("http://pruvitnow.com/preview/wp-content/themes/pruvit/learning-app/assets/fonts/ProximaNova-Regular.ttf") format("truetype"),
-    url("http://pruvitnow.com/preview/wp-content/themes/pruvit/learning-app/assets/fonts/ProximaNova-Regular.svg#ProximaNova-Regular") format("svg");
+  src: url("https://pruvitnow.com/preview/wp-content/themes/pruvit/learning-app/assets/fonts/ProximaNova-Regular.eot?#iefix") format("embedded-opentype"),
+    url("https://pruvitnow.com/preview/wp-content/themes/pruvit/learning-app/assets/fonts/ProximaNova-Regular.otf") format("opentype"),
+    url("https://pruvitnow.com/preview/wp-content/themes/pruvit/learning-app/assets/fonts/ProximaNova-Regular.woff") format("woff"),
+    url("https://pruvitnow.com/preview/wp-content/themes/pruvit/learning-app/assets/fonts/ProximaNova-Regular.ttf") format("truetype"),
+    url("https://pruvitnow.com/preview/wp-content/themes/pruvit/learning-app/assets/fonts/ProximaNova-Regular.svg#ProximaNova-Regular") format("svg");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "ProximaNova-Semibold";
-  src: url("http://pruvitnow.com/preview/wp-content/themes/pruvit/learning-app/assets/fonts/ProximaNova-Semibold.eot?#iefix") format("embedded-opentype"),
-    url("http://pruvitnow.com/preview/wp-content/themes/pruvit/learning-app/assets/fonts/ProximaNova-Semibold.otf") format("opentype"),
-    url("http://pruvitnow.com/preview/wp-content/themes/pruvit/learning-app/assets/fonts/ProximaNova-Semibold.woff") format("woff"),
-    url("http://pruvitnow.com/preview/wp-content/themes/pruvit/learning-app/assets/fonts/ProximaNova-Semibold.ttf") format("truetype"),
-    url("http://pruvitnow.com/preview/wp-content/themes/pruvit/learning-app/assets/fonts/ProximaNova-Semibold.svg#ProximaNova-Semibold") format("svg");
+  src: url("https://pruvitnow.com/preview/wp-content/themes/pruvit/learning-app/assets/fonts/ProximaNova-Semibold.eot?#iefix") format("embedded-opentype"),
+    url("https://pruvitnow.com/preview/wp-content/themes/pruvit/learning-app/assets/fonts/ProximaNova-Semibold.otf") format("opentype"),
+    url("https://pruvitnow.com/preview/wp-content/themes/pruvit/learning-app/assets/fonts/ProximaNova-Semibold.woff") format("woff"),
+    url("https://pruvitnow.com/preview/wp-content/themes/pruvit/learning-app/assets/fonts/ProximaNova-Semibold.ttf") format("truetype"),
+    url("https://pruvitnow.com/preview/wp-content/themes/pruvit/learning-app/assets/fonts/ProximaNova-Semibold.svg#ProximaNova-Semibold") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -873,10 +873,10 @@ input.form-control {
 /* Icons */
 @font-face {
   font-family: "slick";
-  src: url("http://pruvitnow.com/preview/wp-content/themes/pruvit/learning-app/assets/fonts/slick.eot");
-  src: url("http://pruvitnow.com/preview/wp-content/themes/pruvit/learning-app/assets/fonts/slick.eot?#iefix") format("embedded-opentype"),
-    url("http://pruvitnow.com/preview/wp-content/themes/pruvit/learning-app/assets/fonts/slick.woff") format("woff"),
-    url("http://pruvitnow.com/preview/wp-content/themes/pruvit/learning-app/assets/fonts/slick.ttf") format("truetype");
+  src: url("https://pruvitnow.com/preview/wp-content/themes/pruvit/learning-app/assets/fonts/slick.eot");
+  src: url("https://pruvitnow.com/preview/wp-content/themes/pruvit/learning-app/assets/fonts/slick.eot?#iefix") format("embedded-opentype"),
+    url("https://pruvitnow.com/preview/wp-content/themes/pruvit/learning-app/assets/fonts/slick.woff") format("woff"),
+    url("https://pruvitnow.com/preview/wp-content/themes/pruvit/learning-app/assets/fonts/slick.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -1052,7 +1052,7 @@ body {
 .pruvit-learn-app-wrap {
   max-width: 420px;
   margin: 50px auto;
-  /* background: url(http://pruvitnow.com/preview/wp-content/themes/pruvit/learning-app/assets/images/iphone6-portrait-img.png) no-repeat scroll center center/100% 100%; */
+  /* background: url(https://pruvitnow.com/preview/wp-content/themes/pruvit/learning-app/assets/images/iphone6-portrait-img.png) no-repeat scroll center center/100% 100%; */
   height: 850px;
   padding: 105px 20px 95px;
 }
@@ -1233,7 +1233,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(255, 255, 255, 0.9) url(http://pruvitnow.com/preview/wp-content/themes/pruvit/learning-app/assets/images/lock-alt.svg) no-repeat scroll center center/40px auto;
+  background: rgba(255, 255, 255, 0.9) url(https://pruvitnow.com/preview/wp-content/themes/pruvit/learning-app/assets/images/lock-alt.svg) no-repeat scroll center center/40px auto;
 }
 
 .pruvit-learn-app-wrap .main-content .app-listBody-wrap {
@@ -1307,7 +1307,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 200, 83, 0.85) url(http://pruvitnow.com/preview/wp-content/themes/pruvit/learning-app/assets/images/checked-white.svg) no-repeat scroll center center/15px auto;
+  background: rgba(0, 200, 83, 0.85) url(https://pruvitnow.com/preview/wp-content/themes/pruvit/learning-app/assets/images/checked-white.svg) no-repeat scroll center center/15px auto;
 }
 
 .pruvit-learn-app-wrap .main-content .req-sign-wrap {
@@ -1889,7 +1889,7 @@ body {
 
   .reboot-60hour-wrap {
     margin-top: -200px;
-    /* background: url(http://pruvitnow.com/preview/wp-content/themes/pruvit/learning-app/assets/images/aDay-in-bg-mb.png) no-repeat scroll top left/cover; */
+    /* background: url(https://pruvitnow.com/preview/wp-content/themes/pruvit/learning-app/assets/images/aDay-in-bg-mb.png) no-repeat scroll top left/cover; */
     /*background-size: cover;*/
     padding-top: 400px;
   }
@@ -1942,7 +1942,7 @@ body {
   }
 
   .reboot-product-box-wrap {
-    /* background: url(http://pruvitnow.com/preview/wp-content/themes/pruvit/learning-app/assets/images/dna-bg.png) no-repeat scroll top center/cover; */
+    /* background: url(https://pruvitnow.com/preview/wp-content/themes/pruvit/learning-app/assets/images/dna-bg.png) no-repeat scroll top center/cover; */
     padding-top: 150px;
     padding-bottom: 40px;
   }

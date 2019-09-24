@@ -12,10 +12,11 @@ import { ModalComponent } from "./modal.component"
 import { ModalService } from "./services/modal.service"
 import { FormsModule } from "@angular/forms";
 import { RouterModule, Routes } from '@angular/router';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 const routes: Routes = [
   {path: '', component: HomeComponent}
-]
+];
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ const routes: Routes = [
     BrowserModule,
     FormsModule,
     HttpClientModule,
+    BrowserAnimationsModule,
     RouterModule.forRoot(routes)
   ],
   entryComponents: [

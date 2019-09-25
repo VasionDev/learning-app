@@ -87,7 +87,10 @@
                     
                 </p>
               </ng-template>
-              <p (click)="getTheLesson(post.learnID, incompleteEl.lesson_id)" style="cursor: pointer;" *ngFor="let incompleteEl of incompleteLesson; let lessonNo = index;"> {{lessonNo + 1}}. {{incompleteEl.ques}}</p>
+              <div *ngIf="incompleteLesson != ''">
+                <p><b>You must complete the following lesson/lessons:</b></p>
+                <p (click)="getTheLesson(post.learnID, incompleteEl.lesson_id)" style="cursor: pointer;" *ngFor="let incompleteEl of incompleteLesson; let lessonNo = index;"> {{lessonNo + 1}}. {{incompleteEl.ques}}</p>
+              </div>
             </div>
           </div>
         </div>

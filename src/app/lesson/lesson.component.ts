@@ -35,7 +35,13 @@ export class LessonComponent implements OnInit {
   completedIndex: any[] = [];
   incompleteLesson: any[] = [];
 
-  constructor(private data: DataService, private wp: WordpressService, private route: ActivatedRoute, private router: Router, private modalService: ModalService) {}
+  constructor(
+    private data: DataService,
+    private wp: WordpressService,
+    private route: ActivatedRoute,
+    private router: Router,
+    private modalService: ModalService
+  ) {}
 
   ngOnInit() {
     this.data.currentData.subscribe((data: any) => {
@@ -94,14 +100,14 @@ export class LessonComponent implements OnInit {
   onClickCompleteAll(postIndex: any, postID: any) {
     let lessonLists = this.posts[postIndex].lesson;
     let completeLesson = JSON.parse(localStorage.getItem("Lesson"));
-    if(completeLesson != null) {
-      for(let i=0; i < lessonLists.length - 1; i++){
-        if(!completeLesson.includes(lessonLists[i].lesson_id)){
+    if (completeLesson != null) {
+      for(let i = 0; i < lessonLists.length - 1; i++) {
+        if (!completeLesson.includes(lessonLists[i].lesson_id)) {
           this.incompleteLesson.push(lessonLists[i]);
         }
       }
-    }else {
-      this.incompleteLesson = lessonLists.slice(0, lessonLists.length-1);
+    } else {
+      this.incompleteLesson = lessonLists.slice(0, lessonLists.length - 1 );
     }
     // console.log(this.incompleteLesson);
     if(!this.incompleteLesson.length) {

@@ -18,16 +18,54 @@ export class HomeComponent implements OnInit, AfterContentChecked {
   indexSlide: any;
   userLoggedIn = false;
   isComplete = 0;
-  spinner = true;
   redirectUrl: any;
   completedLesson: any[] = [];
   completedIndex: any[] = [];
+
+
+  slideConfig = {
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    dots: false,
+    centerMode: true,
+    centerPadding: '60px',
+    infinite: false,
+    slickGoTo: 0
+  };
 
   constructor(private data: DataService, private wp: WordpressService, private route: ActivatedRoute) {}
 
   ngOnInit() {
     this.loadSignInStatus();
-    this.loadApi();
+    this.data.currentData.subscribe((data: any) => {
+      this.posts = data;
+      const tempIndex = JSON.parse(localStorage.getItem("LastLesson"));
+      let mainIndex: number;
+
+      if (tempIndex === null) {
+        this.indexPost = this.posts[0].learnID;
+        this.indexSlide = 0;
+      } else {
+        for (mainIndex = 0; mainIndex < this.posts.length; mainIndex++) {
+          if (this.posts[mainIndex].learnID === tempIndex) {
+            this.indexPost = tempIndex;
+            this.indexSlide = mainIndex;
+          }
+        }
+      }
+
+      this.completedLesson = JSON.parse(localStorage.getItem("Lesson"));
+      this.completedIndex = JSON.parse(localStorage.getItem("Index"));
+
+      this.allComplete();
+      this.route.queryParamMap.subscribe(params => {
+        const lessonID = params.get("lesson");
+        if (lessonID != null) {
+          this.data.nameChange("LessonComponent");
+        }
+      });
+    });
   }
 
   loadSignInStatus() {
@@ -47,46 +85,6 @@ export class HomeComponent implements OnInit, AfterContentChecked {
       const url = JSON.parse(res);
       this.redirectUrl = url.url;
     });
-  }
-
-  loadApi() {
-    this.wp.getPosts().subscribe(
-      (data: any) => {
-        this.posts = JSON.parse(data);
-        // console.log(this.posts);
-        this.data.dataChange(this.posts);
-        const tempIndex = JSON.parse(localStorage.getItem("LastLesson"));
-
-        let mainIndex: number;
-        if (tempIndex === null) {
-          this.indexPost = this.posts[0].learnID;
-          this.indexSlide = 0;
-        } else {
-          for (mainIndex = 0; mainIndex < this.posts.length; mainIndex++) {
-            if (this.posts[mainIndex].learnID === tempIndex) {
-              this.indexPost = tempIndex;
-              this.indexSlide = mainIndex;
-            }
-          }
-        }
-        this.completedLesson = JSON.parse(localStorage.getItem("Lesson"));
-        this.completedIndex = JSON.parse(localStorage.getItem("Index"));
-        this.spinner = false;
-        setTimeout(() => {
-          learnObj.learnSlide(this.indexSlide);
-        }, 100);
-      },
-      err => {},
-      () => {
-        this.allComplete();
-        this.route.queryParamMap.subscribe(params => {
-          const lessonID = params.get("lesson");
-          if (lessonID != null) {
-            this.data.nameChange("LessonComponent");
-          }
-        });
-      }
-    );
   }
 
   ngAfterContentChecked() {
@@ -222,4 +220,17 @@ export class HomeComponent implements OnInit, AfterContentChecked {
     }
     localStorage.setItem("CompletedTools", JSON.stringify(CompletedTools));
   }
+
+
+  slickInit(e) {
+    e.slick.slickGoTo(this.indexSlide);
+  }
+
+  breakpoint(e) {}
+
+  afterChange(e) {}
+
+  beforeChange(e) {}
+
+
 }

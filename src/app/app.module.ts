@@ -13,6 +13,7 @@ import { ModalService } from "./services/modal.service"
 import { FormsModule } from "@angular/forms";
 import { RouterModule, Routes } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SlickCarouselModule } from 'ngx-slick-carousel';
 
 const routes: Routes = [
   {path: '', component: HomeComponent}
@@ -33,6 +34,7 @@ const routes: Routes = [
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    SlickCarouselModule,
     RouterModule.forRoot(routes)
   ],
   entryComponents: [

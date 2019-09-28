@@ -15,8 +15,21 @@ import { ResourceComponent } from "./resource/resource.component";
 export class AppComponent implements OnInit {
   myComponent: any;
   dataPosts: any;
+  spinner = true;
 
   constructor(private data: DataService, private wp: WordpressService) {}
+
+  ngOnInit() {
+    this.wp.getPosts().subscribe(
+      (data: any) => {
+        this.data.dataChange(JSON.parse(data));
+      },
+      (err) => {},
+      () => {
+        this.loadComponent();
+      }
+    );
+  }
 
   loadComponent() {
     this.wp.login().subscribe((user: any) => {
@@ -26,7 +39,12 @@ export class AppComponent implements OnInit {
         localStorage.setItem("Lesson", JSON.stringify(value.lessonArray));
       }
       this.myComponent = HomeComponent;
-    });
+    },
+    (err) => {},
+    () => {
+      this.spinner = false;
+    }
+    );
     this.data.$componentName.subscribe((name: any) => {
       if (name === "HomeComponent") {
         this.myComponent = HomeComponent;
@@ -42,7 +60,4 @@ export class AppComponent implements OnInit {
     });
   }
 
-  ngOnInit() {
-    this.loadComponent();
-  }
 }

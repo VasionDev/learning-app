@@ -26,13 +26,15 @@
               "src/styles.css",
               "src/assets/css/compile-input/style.css",
               "src/assets/css/compile-input/main.css",
-              "src/assets/css/font-awesome/font-awesome.css"
+              "src/assets/css/font-awesome/font-awesome.css",
+              "node_modules/slick-carousel/slick/slick.css",
+              "node_modules/slick-carousel/slick/slick-theme.css"
             ],
             "scripts": [
               "src/assets/javascripts/jquery.js",
               "src/assets/javascripts/bootstrap.min.js",
               "src/assets/javascripts/slick.min.js",
-              "src/assets/javascripts/main.js"
+              "node_modules/slick-carousel/slick/slick.min.js"
             ],
             "es5BrowserSupport": true
           },

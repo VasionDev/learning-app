@@ -6,6 +6,7 @@ import { OptionsComponent } from "./options/options.component";
 import { Component, OnInit } from "@angular/core";
 import { HomeComponent } from "./home/home.component";
 import { ResourceComponent } from "./resource/resource.component";
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: "app-root",
@@ -17,7 +18,7 @@ export class AppComponent implements OnInit {
   dataPosts: any;
   spinner = true;
 
-  constructor(private data: DataService, private wp: WordpressService) {}
+  constructor(private data: DataService, private wp: WordpressService, private route: ActivatedRoute) {}
 
   ngOnInit() {
     this.wp.getPosts().subscribe(
@@ -43,6 +44,12 @@ export class AppComponent implements OnInit {
     (err) => {},
     () => {
       this.spinner = false;
+      this.route.queryParamMap.subscribe(params => {
+        const lessonID = params.get("lesson");
+        if (lessonID != null) {
+          this.data.nameChange("LessonComponent");
+        }
+      });
     }
     );
     this.data.$componentName.subscribe((name: any) => {

@@ -164,8 +164,12 @@ export class LessonComponent implements OnInit {
       IndexArray = [];
       LessonArray = [];
     }
-    IndexArray.push(completedIndex);
-    LessonArray.push(completedLesson);
+
+    if ( !LessonArray.includes(completedLesson)) {
+      IndexArray.push(completedIndex);
+      LessonArray.push(completedLesson);
+    }
+
     localStorage.setItem("Lesson", JSON.stringify(LessonArray));
     localStorage.setItem("Index", JSON.stringify(IndexArray));
     const UserId = localStorage.getItem("UserID");

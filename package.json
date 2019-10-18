@@ -21,6 +21,7 @@
     "@angular/router": "~7.2.0",
     "core-js": "^2.5.4",
     "jquery": "^3.4.1",
+    "ng-circle-progress": "^1.5.1",
     "ngx-slick-carousel": "^0.4.6",
     "rxjs": "~6.3.3",
     "slick-carousel": "^1.8.1",

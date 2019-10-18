@@ -1,6 +1,7 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 import { HttpClientModule } from "@angular/common/http";
+import { NgCircleProgressModule } from 'ng-circle-progress';
 
 import { AppComponent } from "./app.component";
 import { HomeComponent } from "./home/home.component";
@@ -35,7 +36,8 @@ const routes: Routes = [
     HttpClientModule,
     BrowserAnimationsModule,
     SlickCarouselModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    NgCircleProgressModule.forRoot({})
   ],
   entryComponents: [
     HomeComponent,

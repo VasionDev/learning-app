@@ -6,6 +6,24 @@
 </div>
 
 <div class="app-slider-content">
+
+  <h5 style="text-align: center;color:#fff;">
+      <circle-progress
+      [percent]="completePercent"
+      [radius]="70"
+      [unitsColor]="'#fff'"
+      [titleColor]="'#fff'"
+      [outerStrokeWidth]="10"
+      [innerStrokeWidth]="10"
+      [outerStrokeColor]="'#00c853'"
+      [innerStrokeColor]="'#fff'"
+      [animation]="true"
+      [showSubtitle] = "true"
+      subtitle = "complete"
+      subtitleColor = "#ffffff"
+      [animationDuration]="400"
+      ></circle-progress>
+  </h5>
   <div class="row app-slider">
     <ngx-slick-carousel class="carousel" 
     #slickModal="slick-carousel" 

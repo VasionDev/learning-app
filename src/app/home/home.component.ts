@@ -16,6 +16,7 @@ export class HomeComponent implements OnInit, AfterContentChecked {
   posts: any;
   indexPost: any;
   indexSlide: any;
+  completePercent: any;
   userLoggedIn = false;
   isComplete = 0;
   redirectUrl: any;
@@ -40,6 +41,11 @@ export class HomeComponent implements OnInit, AfterContentChecked {
     this.loadSignInStatus();
     this.data.currentData.subscribe((data: any) => {
       this.posts = data;
+      let allLength = data.length;
+      let totalLesson = 0;
+      while (allLength > 0) {
+        totalLesson = totalLesson + data[--allLength].lesson.length;
+      }
       const tempIndex = JSON.parse(localStorage.getItem("LastLesson"));
       let mainIndex: number;
 
@@ -57,6 +63,7 @@ export class HomeComponent implements OnInit, AfterContentChecked {
 
       this.completedLesson = JSON.parse(localStorage.getItem("Lesson"));
       this.completedIndex = JSON.parse(localStorage.getItem("Index"));
+      this.completePercent = ((100 * this.completedLesson.length) / totalLesson).toFixed();
 
       this.allComplete();
       this.route.queryParamMap.subscribe(params => {

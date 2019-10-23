@@ -3,7 +3,6 @@ import { Component, OnInit, AfterContentChecked } from "@angular/core";
 import { WordpressService } from "../services/wordpress.service";
 import { ActivatedRoute } from '@angular/router';
 
-declare var learnObj: any;
 let CompletedTools = [];
 let prerequisites = [];
 
@@ -18,6 +17,8 @@ export class HomeComponent implements OnInit, AfterContentChecked {
   indexSlide: any;
   completePercent: any;
   userLoggedIn = false;
+  nextStartLesson = {lesson_id: ''};
+  lastEndedPostIndex: any;
   isComplete = 0;
   redirectUrl: any;
   completedLesson: any[] = [];
@@ -43,6 +44,7 @@ export class HomeComponent implements OnInit, AfterContentChecked {
       this.posts = data;
       let allLength = data.length;
       let totalLesson = 0;
+      let lastEndedPostLessons = [];
       while (allLength > 0) {
         totalLesson = totalLesson + data[--allLength].lesson.length;
       }
@@ -51,19 +53,26 @@ export class HomeComponent implements OnInit, AfterContentChecked {
 
       if (tempIndex === null) {
         this.indexPost = this.posts[0].learnID;
+        lastEndedPostLessons = this.posts[0].lesson;
+        this.lastEndedPostIndex = this.posts[0];
         this.indexSlide = 0;
       } else {
         for (mainIndex = 0; mainIndex < this.posts.length; mainIndex++) {
           if (this.posts[mainIndex].learnID === tempIndex) {
             this.indexPost = tempIndex;
+            lastEndedPostLessons = this.posts[mainIndex].lesson;
+            this.lastEndedPostIndex = this.posts[mainIndex];
             this.indexSlide = mainIndex;
           }
         }
       }
 
+      this.updateNextStartLesson(lastEndedPostLessons);
       this.completedLesson = JSON.parse(localStorage.getItem("Lesson"));
       this.completedIndex = JSON.parse(localStorage.getItem("Index"));
-      this.completePercent = ((100 * this.completedLesson.length) / totalLesson).toFixed();
+      if (this.completedLesson !== null) {
+        this.completePercent = ((100 * this.completedLesson.length) / totalLesson).toFixed();
+      }
 
       this.allComplete();
       this.route.queryParamMap.subscribe(params => {
@@ -73,6 +82,21 @@ export class HomeComponent implements OnInit, AfterContentChecked {
         }
       });
     });
+  }
+
+  updateNextStartLesson(lastEndedPostLessons) {
+
+    let LessonArray = JSON.parse(localStorage.getItem("Lesson"));
+    if (LessonArray === null) {
+      LessonArray = [];
+    }
+
+    for (const lesson of lastEndedPostLessons) {
+      if ( !LessonArray.includes(lesson.lesson_id)) {
+        this.nextStartLesson = lesson;
+        break;
+      }
+    }
   }
 
   loadSignInStatus() {
@@ -95,7 +119,6 @@ export class HomeComponent implements OnInit, AfterContentChecked {
   }
 
   ngAfterContentChecked() {
-    this.isComplete = document.getElementsByClassName("complete-task").length;
     const slick = document.getElementsByClassName("slick-center")[0];
     if (slick !== undefined) {
       const dataValue = slick.getElementsByTagName("a")[0];
@@ -103,23 +126,18 @@ export class HomeComponent implements OnInit, AfterContentChecked {
     }
   }
 
-  onClickSlide(clickedLearnID: any) {
-    let slideIndex: number;
-    for (slideIndex = 0; slideIndex < this.posts.length; slideIndex++) {
-      if (this.posts[slideIndex].learnID === clickedLearnID) {
-        this.indexPost = clickedLearnID;
-        this.indexSlide = slideIndex;
-        setTimeout(() => {
-          learnObj.learnSlide(this.indexSlide);
-        }, 100);
+  completedLessonNo(learnList: any) {
+    let CompletedLesson = JSON.parse(localStorage.getItem("Lesson"));
+    let lessonNo = 0;
+    if (CompletedLesson === null) {
+      CompletedLesson = [];
+    }
+    for (const lesson of learnList.lesson) {
+      if ( CompletedLesson.includes(lesson.lesson_id)) {
+        lessonNo++;
       }
     }
-  }
-
-  isCompleteFunction(i: any) {
-    if (+this.indexPost === i) {
-      return this.isComplete;
-    }
+    return lessonNo;
   }
 
   prereqText(prereq: any) {

@@ -21,7 +21,14 @@ export class DataService {
 
   lessonChange(index: any, lesson: any) {
     this.lessonSource.next({ index, lesson });
-    localStorage.setItem("LastLesson", JSON.stringify(index));
+    let completedLesson = JSON.parse(localStorage.getItem("Lesson"));
+    if (completedLesson !== null) {
+      if ( !completedLesson.includes(lesson)) {
+        localStorage.setItem("LastLesson", JSON.stringify(index));
+      }
+    } else {
+      localStorage.setItem("LastLesson", JSON.stringify(index));
+    }
   }
 
   dataChange(data: any) {

@@ -342,6 +342,16 @@ small {
   background: #0272e1;
 }
 
+.btn-brand-success {
+  background: #44b87c;
+  color: #ffffff;
+}
+
+.btn-brand-success:hover {
+  background: #33a86c;
+  color: #ffffff;
+}
+
 .btn-gray-dark {
   background: #666666;
   color: #333333;

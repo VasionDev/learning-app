@@ -1,29 +1,39 @@
 <div class="app-header text-center">
-  <!-- <div class="bar-icon">
-    <a class="pointer" (click)="onClickIcon()"><img src="assets/images/menu-bar-icon-blue.png" alt="bar-icon"></a>
-  </div> -->
   <a class="logo logo-background pointer"><img src="https://pruvitnow.com/preview/wp-content/themes/pruvit/learning-app/assets/images/pruvit-logo-black.png" alt="logo"></a>
 </div>
 
 <div class="app-slider-content">
 
-  <h5 style="text-align: center;color:#fff;">
-      <circle-progress
-      [percent]="completePercent"
-      [radius]="70"
-      [unitsColor]="'#fff'"
-      [titleColor]="'#fff'"
-      [outerStrokeWidth]="10"
-      [innerStrokeWidth]="10"
-      [outerStrokeColor]="'#00c853'"
-      [innerStrokeColor]="'#fff'"
-      [animation]="true"
-      [showSubtitle] = "true"
-      subtitle = "complete"
-      subtitleColor = "#ffffff"
-      [animationDuration]="400"
-      ></circle-progress>
-  </h5>
+  <div style="text-align: center;" class="complete-progress">
+    <circle-progress
+    [percent]="completePercent"
+    [radius]="70"
+    [unitsColor]="'#fff'"
+    [titleColor]="'#fff'"
+    [outerStrokeWidth]="10"
+    [innerStrokeWidth]="10"
+    [outerStrokeColor]="'#00c853'"
+    [innerStrokeColor]="'#fff'"
+    [animation]="true"
+    [showSubtitle] = "true"
+    subtitle = "complete"
+    subtitleColor = "#ffffff"
+    [animationDuration]="400"
+    ></circle-progress>
+    
+    <div style="margin-bottom: 20px;" *ngIf="completedLesson !== null && nextStartLesson.lesson_id !==''" >
+
+      <span *ngIf="lastEndedPostIndex.for_user && !userLoggedIn; else nextProgress;"></span>
+      <ng-template #nextProgress>
+          <h2 style="color: #fff;">Keep Going</h2>
+          <h5 style="color: #fff;">Next up is: 
+            <span>{{nextStartLesson.ques}}</span><br>
+            <a style="margin-top: 10px;" (click)="onClickLesson(lastEndedPostIndex.learnID,nextStartLesson.lesson_id)" routerLink='/' [queryParams]="{module: lastEndedPostIndex.learnID, lesson: nextStartLesson.lesson_id}" class="btn btn-brand-success btn-medium pointer">Continue learning</a>
+          </h5>
+      </ng-template>
+    </div>
+  </div>
+
   <div class="row app-slider">
     <ngx-slick-carousel class="carousel" 
     #slickModal="slick-carousel" 
@@ -41,12 +51,12 @@
           <div class="slider-text">
             <h6 class="slider-title">{{ post.learnTitle }}</h6>
             <p class="gary lesson-complete" [style.visibility]="(+indexPost === post.learnID) ? 'visible' : 'hidden'">
-              <span class="less-pass">{{ isCompleteFunction(post.learnID) }}</span> of <span
+              <span class="less-pass">{{ completedLessonNo(post) }}</span> of <span
                 class="less-no">{{ post.lesson?.length }}</span>
               lessons completed </p>
           </div>
           <div class="progress-bar">
-            <span class="bar" [style.width.%]="(isComplete * 100) / post.lesson?.length"
+            <span class="bar" [style.width.%]="(completedLessonNo(post) * 100) / post.lesson?.length"
               [style.visibility]="(+indexPost === post.learnID) ? 'visible' : 'hidden'"></span>
           </div>
         </a>

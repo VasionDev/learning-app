@@ -15,7 +15,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class AppComponent implements OnInit {
   myComponent: any;
-  dataPosts: any;
+  allLessonID = [];
   spinner = true;
 
   constructor(private data: DataService, private wp: WordpressService, private route: ActivatedRoute) {}
@@ -23,7 +23,13 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     this.wp.getPosts().subscribe(
       (data: any) => {
-        this.data.dataChange(JSON.parse(data));
+        const postData = JSON.parse(data);
+        for (const post of postData) {
+          for (const lesson of post.lesson) {
+            this.allLessonID.push(lesson.lesson_id);
+          }
+        }
+        this.data.dataChange(postData);
       },
       (err) => {},
       () => {
@@ -33,25 +39,46 @@ export class AppComponent implements OnInit {
   }
 
   loadComponent() {
-    this.wp.login().subscribe((user: any) => {
-      if (user.mvuser_id !== undefined && user.mvuser_id !== "") {
-        const value = JSON.parse(user.user_learn_data);
-        localStorage.setItem("Index", JSON.stringify(value.indexArray));
-        localStorage.setItem("Lesson", JSON.stringify(value.lessonArray));
-      }
-      this.myComponent = HomeComponent;
-    },
-    (err) => {},
-    () => {
-      this.spinner = false;
-      this.route.queryParamMap.subscribe(params => {
-        const lessonID = params.get("lesson");
-        if (lessonID != null) {
-          this.data.nameChange("LessonComponent");
+    this.wp.login().subscribe(
+      (user: any) => {
+        if (user.mvuser_id !== undefined && user.mvuser_id !== "") {
+          const value = JSON.parse(user.user_learn_data);
+          localStorage.setItem("Index", JSON.stringify(value.indexArray));
+          localStorage.setItem("Lesson", JSON.stringify(value.lessonArray));
         }
-      });
-    }
+        this.myComponent = HomeComponent;
+      },
+      (err) => {},
+      () => {
+        this.spinner = false;
+        this.route.queryParamMap.subscribe(params => {
+          const lessonID = params.get("lesson");
+          if (lessonID != null) {
+            this.data.nameChange("LessonComponent");
+          }
+        });
+
+        let CompletedLesson = JSON.parse(localStorage.getItem("Lesson"));
+        let CompletedPost = JSON.parse(localStorage.getItem("Index"));
+        if (CompletedLesson === null && CompletedPost === null) {
+          CompletedLesson = [];
+          CompletedPost = [];
+        }
+
+        CompletedLesson.forEach(lessonID => {
+          if ( !this.allLessonID.includes(lessonID)) {
+            const removeIndex = CompletedLesson.indexOf(lessonID);
+            CompletedLesson.splice(removeIndex, 1);
+            CompletedPost.splice(removeIndex, 1);
+          }
+        });
+
+        // console.log(CompletedLesson, CompletedPost);
+        localStorage.setItem("Lesson", JSON.stringify(CompletedLesson));
+        localStorage.setItem("Index", JSON.stringify(CompletedPost));
+      }
     );
+
     this.data.$componentName.subscribe((name: any) => {
       if (name === "HomeComponent") {
         this.myComponent = HomeComponent;

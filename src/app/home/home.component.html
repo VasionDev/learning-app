@@ -21,7 +21,7 @@
     [animationDuration]="400"
     ></circle-progress>
     
-    <div style="margin-bottom: 20px;" *ngIf="completedLesson !== null && nextStartLesson.lesson_id !==''" >
+    <div style="margin-bottom: 20px;" *ngIf="completedLesson.length && nextStartLesson.lesson_id !==''" >
 
       <span *ngIf="lastEndedPostIndex.for_user && !userLoggedIn; else nextProgress;"></span>
       <ng-template #nextProgress>
@@ -42,9 +42,9 @@
     (breakpoint)="breakpoint($event)"
     (afterChange)="afterChange($event)"
     (beforeChange)="beforeChange($event)">
-      <div ngxSlickItem class="col-md-12 app-slider-item slide" *ngFor="let post of posts; let slNo = index;"
+      <div [attr.data-learn-id]="post.learnID" ngxSlickItem class="col-md-12 app-slider-item slide" *ngFor="let post of posts; let slNo = index;"
       [class.locked]="post.for_user || !prerequisiteComplete(post)">
-        <a [attr.data-learn-id]="post.learnID" class="slider-item-inner pointer" (click)="slickModal.slickGoTo(slNo)">
+        <a class="slider-item-inner pointer" (click)="slickModal.slickGoTo(slNo)">
           <div class="slider-img">
             <img src="{{ post.learnThumb }}" alt="img" class="img-responsive">
           </div>

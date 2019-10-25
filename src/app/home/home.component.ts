@@ -1,5 +1,5 @@
 import { DataService } from "./../services/data.service";
-import { Component, OnInit, AfterContentChecked } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 import { WordpressService } from "../services/wordpress.service";
 import { ActivatedRoute } from '@angular/router';
 
@@ -11,7 +11,7 @@ let prerequisites = [];
   templateUrl: "./home.component.html",
   styleUrls: ["./home.component.css"]
 })
-export class HomeComponent implements OnInit, AfterContentChecked {
+export class HomeComponent implements OnInit {
   posts: any;
   indexPost: any;
   indexSlide: any;
@@ -116,14 +116,6 @@ export class HomeComponent implements OnInit, AfterContentChecked {
       const url = JSON.parse(res);
       this.redirectUrl = url.url;
     });
-  }
-
-  ngAfterContentChecked() {
-    const slick = document.getElementsByClassName("slick-center")[0];
-    if (slick !== undefined) {
-      const dataValue = slick.getElementsByTagName("a")[0];
-      this.indexPost = dataValue.getAttribute("data-learn-id");
-    }
   }
 
   completedLessonNo(learnList: any) {
@@ -253,7 +245,10 @@ export class HomeComponent implements OnInit, AfterContentChecked {
 
   breakpoint(e) {}
 
-  afterChange(e) {}
+  afterChange(e) {
+    const dataValue = document.querySelector('.slick-center').getAttribute('data-learn-id');
+    this.indexPost = dataValue;
+  }
 
   beforeChange(e) {}
 

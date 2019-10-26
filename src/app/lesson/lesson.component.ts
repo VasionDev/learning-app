@@ -58,6 +58,7 @@ export class LessonComponent implements OnInit {
       this.indexPost = values.index;
     });*/
     this.completedTask();
+    window.scrollTo(0, 0);
   }
 
   // openModal(id: string) {
